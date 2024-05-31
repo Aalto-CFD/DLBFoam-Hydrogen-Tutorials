@@ -43,17 +43,7 @@ refmapping
     active          false;
 }
 
-#include        "$FOAM_CASE/mech/reactions.foam"
-
-LewisNumbers
-{
-    #include "LewisNumbersDict"
+reactions {
 }
-
-differentialDiffusion on; // for reactingDNS
-thermalDiffusion off; // for reactingDNS
-
-Prt  Prt [0 0 0 0 0] 0.7; // for reactingDNS
-Sct  Sct [0 0 0 0 0] 0.7; // for reactingDNS
 
 // ************************************************************************* //

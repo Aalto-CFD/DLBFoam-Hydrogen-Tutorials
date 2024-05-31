@@ -4,7 +4,7 @@ internalVectorXField #codeStream
     #{
         #include "fvCFD.H"
         #include <vector>
-        #include "flame_cpp_funcs.H"
+        #include "$FOAM_CASE/0/flame_cpp_funcs.H"
 
     #};
     codeOptions

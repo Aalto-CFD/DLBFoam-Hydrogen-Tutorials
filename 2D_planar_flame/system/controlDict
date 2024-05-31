@@ -49,21 +49,7 @@ runTimeModifiable true;
 
 adjustTimeStep  no;
 
-functions
-{
-    #includeFunc    Qdot(executeControl=timeStep)
-    #includeFunc    graphCellFn
-    #includeFunc    volIntegrateFn(fields=(Qdot))
-    #includeFunc    averageMolarWeightFn
-    #includeFunc    patchIntegrate(operation=sum,patch=inlet,fields=(rho),writeControl=writeTime)
-    #includeFunc    patchIntegrate(operation=sum,patch=outlet,fields=(rho),writeControl=writeTime)
-    #includeFunc    patchIntegrate(operation=sum,patch=inlet,fields=(h),writeControl=writeTime)
-    #includeFunc    patchIntegrate(operation=sum,patch=outlet,fields=(h),writeControl=writeTime)
-    #includeFunc    frequentWriteFn
-    #includeFunc    consumptionSpeed
-}
-
-libs            ( "libchemistryModel_DLB.so" "libODE_DLB.so" "$FOAM_CASE/mech/libc_pyjac.so" "libmoreDiffusion.so" );
+libs            ( "libchemistryModel_DLB.so" "libODE_DLB.so" "$FOAM_CASE/constant/mech/lib/libc_pyjac.so" "libFickianTransport.so" );
 
 
 // ************************************************************************* //

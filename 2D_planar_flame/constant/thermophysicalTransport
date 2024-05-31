@@ -22,7 +22,7 @@ laminar
     writeDmi        no;
     D
     {
-        #include        "binaryDiffusionCoefficientsPolynomialDict"
+        #include        "$FOAM_CASE/mech/thermobinaryDiffusionCoefficientsPolynomialDict"
     }
 }
 
