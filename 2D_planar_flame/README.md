@@ -7,7 +7,7 @@ This is a 2D planar flame demonstrating capabilities of the FickianTransportFoam
 The present 2D planar case setup
 
 <p align="center">
-  <img src="doc/schematic_2dshear.png" />
+  <img src="doc/schematic_2dplanarFlame.png" />
 </p>
 
 ## Numerical setup
@@ -17,9 +17,11 @@ The present 2D planar case setup
 
 
 
-## PostProcessing/Validation
+## Postprocessing
 
-
+<p align="center">
+  <img src="doc/evolution.png" />
+</p>
 
 **Total speed-up compared to standard OpenFOAM solver was around ?.**
 
