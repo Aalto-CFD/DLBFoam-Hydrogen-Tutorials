@@ -1,0 +1,43 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+
+functionObjectLibs ( "libutilityFunctionObjects.so" );
+enabled         true;
+type            coded;
+writeControl    writeTime;
+executeControl  writeTime;
+
+codeOptions
+#{
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/physicalProperties/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/reactionThermo/lnInclude
+#};
+
+codeLibs
+#{
+    -lmeshTools \
+    -lfluidThermophysicalModels
+#};
+
+codeInclude
+#{
+    #include "fluidReactionThermo.H"
+#};
+
+codeExecute
+#{
+    const word thermoName(IOobject::groupName(physicalProperties::typeName, word::null  ));
+    const fluidReactionThermo& thermo = mesh().lookupObject<fluidReactionThermo>(thermoName);
+    const volScalarField W(thermo.W());
+    W.write();
+#};
+
+// ************************************************************************* //

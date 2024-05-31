@@ -1,0 +1,15 @@
+
+         type            surfaceFieldValue;
+         libs            ("libfieldFunctionObjects.so");
+ 
+         log             true;
+         writeControl    writeTime;
+         writeFields     true;
+ 
+         surfaceFormat   none;
+         regionType      patch;
+         name            outlet;
+ 
+    operation       areaAverage;
+    fields             ("NO");
+

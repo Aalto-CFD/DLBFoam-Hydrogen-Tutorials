@@ -1,0 +1,20 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+
+
+    // Mandatory entries    (unmodifiable)
+type            add;
+libs            ("libfieldFunctionObjects.so");
+
+    // Mandatory (inherited) entries    (runtime modifiable)
+fields          (U_old Ue);
+
+    // Optional (inherited) entries
+result          U;
+
+// ************************************************************************* //

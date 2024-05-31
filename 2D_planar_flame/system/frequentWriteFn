@@ -1,0 +1,22 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+functionObjectLibs ( "libutilityFunctionObjects.so" );
+
+type            writeObjects;
+
+enabled         true;
+
+objects         ( "T" "Qdot" "OH" "H2" "H2O" "O2" "RR.H2" );
+
+writeControl    timeStep;
+
+writeInterval   315;
+
+
+
+// ************************************************************************* //
