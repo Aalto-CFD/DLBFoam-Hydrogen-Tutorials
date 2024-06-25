@@ -17,9 +17,8 @@ FoamFile
 
 laminar
 {
-    model           FickianFourier;
-    mixtureDiffusionCoefficients no;
-    writeDmi        no;
+    model           mixtureAveraged;
+    selfDiffusionLimit 1e-8;
     D
     {
         #include        "$FOAM_CASE/constant/mech/thermo/binaryDiffusionCoefficientsPolynomialDict"
