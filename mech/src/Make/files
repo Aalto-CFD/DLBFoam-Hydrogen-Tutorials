@@ -10,4 +10,4 @@ spec_rates.c
 jacobs/jacob_0.c
 jacobs/jacob_1.c
 jacobs/jacob_2.c
-LIB = ../lib/libpyjac
+LIB = ../lib/libc_pyjac

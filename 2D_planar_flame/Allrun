@@ -1,78 +1,9 @@
 #!/bin/bash
 cd ${0%/*} || exit 1    # Run from this directory
 
-if [ -z ${1+x} ]; then echo "[$0] Please specify the thickening factor" && exit 1; fi
-if [ -z ${2+x} ]; then echo "[$0] Please specify the equivalence ratio" && exit 1; fi
-if [ -z ${3+x} ]; then echo "[$0] Please specify the chemical mechanism name" && exit 1; fi
-if [ -z ${4+x} ]; then echo "[$0] Please specify the diffusion model (UnityLewis/reactingDNS/Fickian/MaxwellStefan)" && exit 1; fi
-if [ -z ${5+x} ]; then echo "[$0] Please specify the mesh type (1D/2Ddisp/2Dfull)" && exit 1; fi
-# 6th argument is optional domain height H/lf
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
 
-source ../../RunFunctions
-clean_case
-
-if [[ "$5" == "1D" ]]; then
-    N_t_f=10
-    Nprocs=1
-elif  [[ "$5" == "2Ddisp" ]]; then
-    N_t_f=3
-    if [ -z ${6+x} ]; then echo "[$0] Please specify domain height H/lf" && exit 1; fi
-    if [[ "$6" -lt 10 ]]; then
-        Nprocs=1
-    elif [[ "$6" -lt 20 ]]; then
-        Nprocs=2
-    else
-        Nprocs=4
-    fi
-elif [[ "$5" == "2Dfull" ]]; then
-    N_t_f=3
-    Nprocs=512
-else
-    echo "[$0] Please specify correct mesh type (1D/2Ddisp/2Dfull) $1 $2 $3 $4  $5 "
-    exit 1
-fi
-
-
-if [ -z ${6+x} ]; then extra_args=""
-else extra_args="-W 20 -H $6"
-fi
-
-if   [[ "$4" == "ConstLewis" ]];    then cantera_model=Mix
-elif [[ "$4" == "reactingDNS" ]];   then cantera_model=Mix
-elif [[ "$4" == "Fickian" ]];       then cantera_model=Mix
-elif [[ "$4" == "mixtureAveraged" ]]; then cantera_model=Mix
-elif [[ "$4" == "MaxwellStefan" ]]; then cantera_model=Multi
-else cantera_model=$4
-fi
-if ! python set_params.py $1 $2 $3 $cantera_model $N_t_f $extra_args; then
-    echo "[$0] ERROR: \"set_params.py $1 $2 $3 $cantera_model $N_t_f $extra_args\" failed" && exit 1
-fi
-source ICBC
-
-prepare_time_control # needs to be first, or OF will complain about TO_BE_SET
-prepare_chemmech $3  # to avoid complaints about DLB libraries not found
-prepare_diffusion $4 $3
-if [[ "$5" == "1D" ]]; then
-    prepare_mapping cantera_data
-    foamDictionary -entry frontCoordinate -set "$x_front"   0/planarMappingDict
-elif  [[ "$5" == "2Ddisp" || $5 == "2Dfull" ]]; then
-    python get_openfoam_mapping.py "$1" "$2" "$3" "$4"
-    prepare_mapping openfoam_data
-    # mapped_coord=$(python get_optimized_front_coord.py openfoam_data "$Lx" --saveFig) # mapping based on optimization of front position
-    mapped_coord=$(python get_front_coord.py Qdot)
-    if [ -z "$mapped_coord" ]; then echo "[$0] ERROR: \"get_front_coord.py openfoam_data Qdot\" failed" && exit 1; fi
-    echo "[$0] Mapped front coordinate: $mapped_coord"
-    foamDictionary -entry frontCoordinate -set "$mapped_coord"   0/planarMappingDict
-fi
-
-foamDictionary -entry Lx              -set "$Lx"        0/planarMappingDict
-foamDictionary -entry Ly              -set "$Ly"        0/planarMappingDict
-foamDictionary -entry amplitude       -set "$A_perturb" 0/planarMappingDict
-foamDictionary -entry frequency       -set "$f_perturb" 0/planarMappingDict
-foamDictionary -entry thickeningFactor -set "$1"  system/fvSolution
-
-./PrepareMesh $5 $Nprocs
-
-# MYEXE=$(foamDictionary -entry application -value system/controlDict)
-# NPROCS=$(foamDictionary -entry numberOfSubdomains -value system/decomposeParDict)
-# mpirun -np $NPROCS $MYEXE -parallel | tee log.$MYEXE
+runApplication blockMesh 
+runApplication decomposePar -force -fileHandler collated -ioRanks '( 0 128 256 )'
+runParallel reactingFoam -fileHandler collated -ioRanks '( 0 128 256 )'

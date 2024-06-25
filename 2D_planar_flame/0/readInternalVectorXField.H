@@ -4,14 +4,14 @@ internalVectorXField #codeStream
     #{
         #include "fvCFD.H"
         #include <vector>
-        #include "$FOAM_CASE/0/flame_cpp_funcs.H"
+        #include "flame_cpp_funcs.H"
 
     #};
     codeOptions
     #{
         -I$(LIB_SRC)/finiteVolume/lnInclude \
         -I$(LIB_SRC)/meshTools/lnInclude \
-        -I../../../../common/cpp
+        -I$(FOAM_CASE)/0
     #};
     codeLibs
     #{
