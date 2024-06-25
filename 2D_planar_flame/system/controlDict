@@ -23,7 +23,7 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         0.2037736458;
+endTime         0.0679245486; //Simulate 100 flame times first
 
 deltaT          1.1e-06;
 
