@@ -54,4 +54,4 @@ I. Morev, B. Tekgül, M. Gadalla, A. Shahanaghi, J. Kannan, S. Karimkashi, O. Ka
 A. Aniello, D. Laera, S. Marragou, H. Magnes, L. Selle, T. Schuller,
 and T. Poinsot, “Experimental and numerical investigation of two flame
 stabilization regimes observed in a dual swirl H2-air coaxial injector,”
-Combustion and Flame, vol. 249, p. 112595, Mar. 2023
+Combustion and Flame, vol. 249, p. 112595, Mar. (2023)
