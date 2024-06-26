@@ -1,5 +1,5 @@
 # 3D turbulent non-premixed flame (HYLON, Flame A)
-This is one of the turbulent hydrogen flames proposed in the clean aviation workshop and presented in the TNF workshop Ref.[[1]](#1)Ref.[[2]](#2). The case flame demonstrating capabilities of the FickianTransportFoam and DLBFoam, published in Ref.[[3]](#3) and [[4]](#4). 
+This is one of the turbulent hydrogen flames proposed in the clean aviation workshop and presented in the TNF workshop Ref.[[1]](#1) [[2]](#2). The case flame demonstrating capabilities of the FickianTransportFoam and DLBFoam, published in Ref.[[3]](#3) and [[4]](#4). 
 
 ## Case description
 The case represents an anchored swirling turbulent flame. The details of the experimental setup can be found in the work by Aneallo et al.Ref.[[5]](#5).
