@@ -4,7 +4,7 @@ This is one of the turbulent hydrogen flames proposed in the clean aviation work
 ## Case description
 The case represents an anchored swirling turbulent flame. The details of the experimental setup can be found in the work by Aneallo et al.Ref.[[5]](#5).
 <p align="center">
-  <img src="doc/HYLON_Injector.pdf" alt="drawing" width="800"/>
+  <img src="doc/HYLON_Injector.png" alt="drawing" width="600"/>
 </p>
 
 
@@ -12,7 +12,7 @@ The case represents an anchored swirling turbulent flame. The details of the exp
 The details of the numerical setup can be found in our publication Ref.[[3]](#3).
 
 <p align="center">
-  <img src="doc/Mesh.pdf" alt="drawing" width="800"/>
+  <img src="doc/HYLON_Mesh.png" alt="drawing" width="600"/>
 </p>
 
 
@@ -23,13 +23,13 @@ Compile first the mechanism in the *mech* folder and run the case with *./Allrun
 To post-process the simulation data, you can use Python or Paraview to visualize the flame. For sampling, two sampling dictionaries are provided in the system folder that can be used for plotting the experimental data over a line at different axial heights.
 
 <p align="center">
-  <img src="doc/HYLON.png" alt="drawing" width="800"/>
+  <img src="doc/HYLON.png" alt="drawing" width="600"/>
 </p>
 
 The cold flow validation is shown in the figure below. For the reacting flow validation please check the paper.
 
 <p align="center">
-  <img src="doc/Cold_validation.pdf" alt="drawing" width="800"/>
+  <img src="doc/HYLON_ColdValidation.png" alt="drawing" width="800"/>
 </p>
 **Total speed-up compared to standard OpenFOAM solver was around 13.
 
