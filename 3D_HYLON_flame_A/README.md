@@ -23,13 +23,13 @@ Compile first the mechanism in the *mech* folder and run the case with *./Allrun
 To post-process the simulation data, you can use Python or Paraview to visualize the flame. For sampling, two sampling dictionaries are provided in the system folder that can be used for plotting the experimental data over a line at different axial heights.
 
 <p align="center">
-  <img src="doc/HYLON.png" alt="drawing" width="600"/>
+  <img src="doc/HYLON.png" alt="drawing" width="400"/>
 </p>
 
 The cold flow validation is shown in the figure below. For the reacting flow validation please check the paper.
 
 <p align="center">
-  <img src="doc/HYLON_ColdValidation.png" alt="drawing" width="800"/>
+  <img src="doc/HYLON_ColdValidation.png" alt="drawing" width="600"/>
 </p>
 **Total speed-up compared to standard OpenFOAM solver was around 13.
 
