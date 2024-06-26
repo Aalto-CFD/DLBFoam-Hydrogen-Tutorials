@@ -27,8 +27,6 @@ endTime         0.0679245486; //Simulate 100 flame times first
 
 deltaT          1.1e-06;
 
-maxDeltaT       1e-06;
-
 writeControl    timeStep;
 
 writeInterval   1575;

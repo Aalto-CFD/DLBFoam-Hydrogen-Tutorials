@@ -29,7 +29,7 @@ solvers
         $rho            ;
         relTol          0;
     }
-    "(p|p_rgh)"
+    p
     {
         solver          PCG;
         preconditioner  DIC;
@@ -37,12 +37,12 @@ solvers
         relTol          0.1;
         minIter         1;
     }
-    "(pFinal|p_rghFinal)"
+    pFinal
     {
         $p              ;
         relTol          0;
     }
-    "(U|h|k|epsilon|he)"
+    "(U|h|he)"
     {
         solver          smoothSolver;
         smoother        symGaussSeidel;
@@ -50,7 +50,7 @@ solvers
         relTol          0.01;
         minIter         1;
     }
-    "(U|h|k|epsilon|he)Final"
+    "(U|h|he)Final"
     {
         $U              ;
         tolerance       1e-08;
@@ -63,18 +63,6 @@ solvers
         tolerance       1e-08;
         minIter         1;
     }
-    "G.*"
-    {
-        solver          PCG;
-        preconditioner  DIC;
-        tolerance       1e-05;
-        relTol          0.1;
-    }
-    GFinal
-    {
-        $G              ;
-        relTol          0;
-    }
 }
 
 PIMPLE
@@ -85,7 +73,6 @@ PIMPLE
     nNonOrthogonalCorrectors 0;
 }
 
-thickeningFactor 1;
 
 
 // ************************************************************************* //
