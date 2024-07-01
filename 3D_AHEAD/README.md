@@ -34,5 +34,4 @@ I. Morev, B. Tekgül, M. Gadalla, A. Shahanaghi, J. Kannan, S. Karimkashi, O. Ka
 T. G. Reichel, C. O. Paschereit, Interaction mechanisms of fuel momentum with flashback limits in lean-premixed combustion of hydrogen [10.1016/j.ijhydene.2016.11.018](https://doi.org/10.1016/j.ijhydene.2016.11.018) 
 
 
-https://doi.org/10.1016/j.ijhydene.2016.11.018
 
