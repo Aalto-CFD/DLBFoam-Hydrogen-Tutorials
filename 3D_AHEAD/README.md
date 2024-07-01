@@ -4,7 +4,9 @@
 
 ## Case description
 
-
+<p align="center">
+  <img src="doc/sc.png" alt="drawing" width="500"/>
+</p>
 
 ## Numerical setup
 
