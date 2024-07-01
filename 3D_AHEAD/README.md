@@ -25,12 +25,14 @@ This is a validation study of the AHEAD premixed burner carried out under stable
 
 
 <a id="1">[1]</a>
-A. Haider, I. Morev, A. Rintanen, Z. Shahin, P. Tamadonfar, S. Karimkashi, A. Wehrfritz, V. Vuorinen, DLBFoam for open-source numerical simulations of
-hydrogen flames
+A. Haider, I. Morev, A. Rintanen, Z. Shahin, P. Tamadonfar, S. Karimkashi, A. Wehrfritz, V. Vuorinen, DLBFoam for open-source numerical simulations of hydrogen flames
 
 <a id="2">[2]</a> 
 I. Morev, B. Tekgül, M. Gadalla, A. Shahanaghi, J. Kannan, S. Karimkashi, O. Kaario, V. Vuorinen, Fast reactive flow simulations using analytical Jacobian and dynamic load balancing in OpenFOAM, Physics of Fluids 34, 021801, [10.1063/5.0077437](https://doi.org/10.1063/5.0077437) (2022).
 
 <a id="3">[3]</a>
-T. G. Reichel, C. O. Paschereit, Interaction mechanisms of fuel momentum with flashback limits in lean-premixed combustion of hydrogen
+T. G. Reichel, C. O. Paschereit, Interaction mechanisms of fuel momentum with flashback limits in lean-premixed combustion of hydrogen [10.1016/j.ijhydene.2016.11.018](https://doi.org/10.1016/j.ijhydene.2016.11.018) 
+
+
+https://doi.org/10.1016/j.ijhydene.2016.11.018
 
