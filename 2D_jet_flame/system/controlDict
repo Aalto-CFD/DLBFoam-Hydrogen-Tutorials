@@ -50,10 +50,9 @@ adjustTimeStep  yes;
 maxCo           4.0;
 
 libs (
-    // "libsampling.so"
     "libchemistryModel_DLB.so"
     "libODE_DLB.so"
-    "$FOAM_CASE/mech/libc_pyjac.so"
+    "$FOAM_CASE/constant/gas/mech/lib/libc_pyjac.so"
     "libFickianTransport.so"
 );
 

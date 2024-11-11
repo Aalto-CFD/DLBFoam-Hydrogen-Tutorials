@@ -28,7 +28,7 @@ fuelMassFractions
 }
 
 
-#include "$FOAM_CASE/mech/thermo.foam"
+#include "$FOAM_CASE/constant/gas/mech/thermo/thermo.foam"
 
 
 // ************************************************************************* //

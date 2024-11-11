@@ -28,8 +28,8 @@ thermoType
 
 inertSpecie N2;
 
-#include "$FOAM_CASE/mech/species.foam";
-#include "$FOAM_CASE/mech/thermo.foam";
+#include "$FOAM_CASE/constant/gas/mech/thermo/species.foam";
+#include "$FOAM_CASE/constant/gas/mech/thermo/thermo.foam";
 
 
 // ************************************************************************* //
