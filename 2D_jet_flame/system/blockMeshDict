@@ -1,0 +1,362 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  | Author: Ilya Morev, Aalto University
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// ---=== Input data ===---
+// X0 = -10d, X4 = 120d, R3 = 15d  in the original paper (92x350 cells)
+
+// #calcInclude    "../../meshing.h" // available in OpenFOAM 11 and later
+
+scale 1;
+
+d           0.001;  // [m] - nozzle diameter
+angleDeg    5;      // [deg] - wedge opening angle
+kN          5;      // [-] - scaling of the mesh size. 1 - the most coarse
+
+
+X0 #calc "-30*$d";
+X1 0.;
+X2 #calc "  8*$d";
+X3 #calc " 70*$d";
+X4 #calc " 120*$d";
+
+Y0 0.;
+Y1 #calc "  0.5 *$d";
+Y2 #calc "  0.67*$d"; // wall thickness 0.17mm
+Y3 #calc "  8.  *$d";
+Y4 #calc " 30.  *$d";
+
+// In the main region:
+// x-direction: NX2X3 cells for (X3-X2)*d   : 116 kN cells for 62 mm -> dx = 0.5345 / kN mm
+// y-direction: NY0Y1+NY1Y2+NY2Y3 for Y3*d  :  31 kN cells for  8 mm -> dy = 0.2581 / kN mm
+
+NX0X1 #calc "$kN*32";
+NX1X2 #calc "$kN*32";
+NX2X3 #calc "$kN*116";
+NX3X4 #calc "$kN*32";
+
+NY0Y1 #calc "$kN*3"; // number of cells in nozzle radius
+NY1Y2 #calc "$kN*4"; // number of cells in the wall thickness
+NY2Y3 #calc "$kN*24";
+NY3Y4 #calc "$kN*16";
+
+Y1uni #calc "$Y3 * scalar($NY0Y1) / ($NY0Y1 + $NY1Y2 + $NY2Y3)";
+Y2uni #calc "$Y3 * scalar($NY0Y1 + $NY1Y2) / ($NY0Y1 + $NY1Y2 + $NY2Y3)";
+
+Y1X4uni #calc "4.5*$Y4 * scalar($NY0Y1) / ($NY0Y1 + $NY1Y2 + $NY2Y3 + $NY3Y4)";
+Y2X4uni #calc "3.5*$Y4 * scalar($NY0Y1 + $NY1Y2) / ($NY0Y1 + $NY1Y2 + $NY2Y3 + $NY3Y4)";
+Y3X4uni #calc "1.2*$Y4 * scalar($NY0Y1 + $NY1Y2 + $NY2Y3) / ($NY0Y1 + $NY1Y2 + $NY2Y3 + $NY3Y4)";
+
+Y3X0X1 #calc "$Y3 - $Y2uni";
+
+// ---=== Derived data ===---
+
+Z0 0;
+Z1pos #calc " $Y1 * sin(degToRad($angleDeg / 2.))";
+Z1neg #calc "-$Y1 * sin(degToRad($angleDeg / 2.))";
+Z2pos #calc " $Y2 * sin(degToRad($angleDeg / 2.))";
+Z2neg #calc "-$Y2 * sin(degToRad($angleDeg / 2.))";
+Z3pos #calc " $Y3 * sin(degToRad($angleDeg / 2.))";
+Z3neg #calc "-$Y3 * sin(degToRad($angleDeg / 2.))";
+Z4pos #calc " $Y4 * sin(degToRad($angleDeg / 2.))";
+Z4neg #calc "-$Y4 * sin(degToRad($angleDeg / 2.))";
+
+Z1unipos #calc " $Y1uni * sin(degToRad($angleDeg / 2.))";
+Z1unineg #calc "-$Y1uni * sin(degToRad($angleDeg / 2.))";
+Z2unipos #calc " $Y2uni * sin(degToRad($angleDeg / 2.))";
+Z2unineg #calc "-$Y2uni * sin(degToRad($angleDeg / 2.))";
+
+Z3X0X1neg #calc "-$Y3X0X1 * sin(degToRad($angleDeg / 2.))";
+Z3X0X1pos #calc " $Y3X0X1 * sin(degToRad($angleDeg / 2.))";
+
+Z1X4unipos #calc " $Y1X4uni * sin(degToRad($angleDeg / 2.))";
+Z1X4unineg #calc "-$Y1X4uni * sin(degToRad($angleDeg / 2.))";
+Z2X4unipos #calc " $Y2X4uni * sin(degToRad($angleDeg / 2.))";
+Z2X4unineg #calc "-$Y2X4uni * sin(degToRad($angleDeg / 2.))";
+Z3X4unipos #calc " $Y3X4uni * sin(degToRad($angleDeg / 2.))";
+Z3X4unineg #calc "-$Y3X4uni * sin(degToRad($angleDeg / 2.))";
+
+grY1Y2 2;
+// Nozzle has uniform cell size
+// smallest_dx(const int N, const double L, const double expansion_ratio)
+// dYnozzle #calc "($Y2 - $Y1) / $NY1Y2";
+dYnozzle #codeStream {
+    codeInclude #{ #include "../../meshing.h" #};
+    code #{ os << smallest_dx($NY1Y2 / 2, ($Y2 - $Y1)/2, $grY1Y2); #};
+};
+
+// Inside and outside the nozzle, the cell size is increased gradually
+grY0Y1 #codeStream {
+    codeInclude #{ #include "../../meshing.h" #};
+    code #{ os << 1/expansion_ratio($NY0Y1, $Y1 - $Y0, $dYnozzle); #};
+};
+grY2Y3 #codeStream {
+    codeInclude #{ #include "../../meshing.h" #};
+    code #{ os << expansion_ratio($NY2Y3, $Y3X0X1 - $Y2, $dYnozzle); #}; //* pow($grY0Y1, 1./($NY0Y1-1))); #};
+};
+// dy of cell at the top of Y3, which is the same as the bottom of Y4 at X0
+dYbw3and4 #calc "$grY2Y3 * $dYnozzle";
+grY3Y4 #codeStream {
+    codeInclude #{ #include "../../meshing.h" #};
+    code #{ os << expansion_ratio($NY3Y4, $Y4 - $Y3, $Y3 / ($NY0Y1 + $NY1Y2 + $NY2Y3)); #};
+};
+grY3Y4X2 #codeStream {
+    codeInclude #{ #include "../../meshing.h" #};
+    code #{ os << expansion_ratio($NY3Y4, $Y4 - $Y3, 0.75*$dYbw3and4); #};
+};
+// X2X3 - base with uniform grid
+grX1X2 #codeStream {
+    codeInclude #{ #include "../../meshing.h" #};
+    code #{ os << 1/expansion_ratio($NX1X2, $X2 - $X1, ( $X3 - $X2 ) / $NX2X3); #};
+};
+grX0X1 #codeStream {
+    codeInclude #{ #include "../../meshing.h" #};
+    // code #{ os << 1/expansion_ratio($NX0X1, $X1 - $X0, ( $X2 - $X1 ) / $NX1X2); #};
+    code #{ os << 1/expansion_ratio($NX0X1, $X1 - $X0, smallest_dx($NX1X2, ( $X2 - $X1 ), $grX1X2) ); #};
+};
+grX3X4 #codeStream {
+    codeInclude #{ #include "../../meshing.h" #};
+    code #{ os << expansion_ratio($NX3X4, $X4 - $X3, ( $X3 - $X2 ) / $NX2X3); #};
+};
+
+vertices
+(
+    ($X0 $Y1 $Z1neg)
+    ($X0 $Y1 $Z1pos)
+    ($X1 $Y1 $Z1neg)
+    ($X1 $Y1 $Z1pos)
+    ($X2 $Y1uni $Z1unineg)
+    ($X2 $Y1uni $Z1unipos)
+    ($X3 $Y1uni $Z1unineg)
+    ($X3 $Y1uni $Z1unipos)
+    ($X4 $Y1uni $Z1unineg)
+    ($X4 $Y1uni $Z1unipos)
+
+    ($X0 $Y2 $Z2neg)
+    ($X0 $Y2 $Z2pos)
+    ($X1 $Y2 $Z2neg)
+    ($X1 $Y2 $Z2pos)
+    ($X2 $Y2uni $Z2unineg)
+    ($X2 $Y2uni $Z2unipos)
+    ($X3 $Y2uni $Z2unineg)
+    ($X3 $Y2uni $Z2unipos)
+    ($X4 $Y2uni $Z2unineg)
+    ($X4 $Y2uni $Z2unipos)
+
+    ($X0 $Y3X0X1 $Z3X0X1neg)
+    ($X0 $Y3X0X1 $Z3X0X1pos)
+    ($X1 $Y3X0X1 $Z3X0X1neg)
+    ($X1 $Y3X0X1 $Z3X0X1pos)
+    ($X2 $Y3 $Z3neg)
+    ($X2 $Y3 $Z3pos)
+    ($X3 $Y3 $Z3neg)
+    ($X3 $Y3 $Z3pos)
+    ($X4 $Y3 $Z3neg)
+    ($X4 $Y3 $Z3pos)
+    
+    ($X0 $Y4 $Z4neg)
+    ($X0 $Y4 $Z4pos)
+    ($X1 $Y4 $Z4neg)
+    ($X1 $Y4 $Z4pos)
+    ($X2 $Y4 $Z4neg)
+    ($X2 $Y4 $Z4pos)
+    ($X3 $Y4 $Z4neg)
+    ($X3 $Y4 $Z4pos)
+    ($X4 $Y4 $Z4neg)
+    ($X4 $Y4 $Z4pos)
+
+    ($X0 $Y0 $Z0)
+    ($X1 $Y0 $Z0)
+    ($X2 $Y0 $Z0)
+    ($X3 $Y0 $Z0)
+    ($X4 $Y0 $Z0)
+);
+
+
+nozzleGradingY ((0.5 0.5 $grY1Y2) (0.5 0.5 #calc "1. / $grY1Y2"));
+// nozzleGradingY 1;
+
+blocks
+(
+    // // Lowest (Y0 -> Y1)
+    hex ( 40 41  2  0 40 41  3  1 ) gas     ($NX0X1  $NY0Y1 1) simpleGrading ( $grX0X1 $grY0Y1 1)
+    hex ( 41 42  4  2 41 42  5  3 ) gas     ($NX1X2                 $NY0Y1 1) edgeGrading ($grX1X2 $grX1X2 $grX1X2 $grX1X2 $grY0Y1 1 1 $grY0Y1 1 1 1 1)
+    hex ( 42 43  6  4 42 43  7  5 ) gas     ($NX2X3  $NY0Y1 1) simpleGrading (1 1 1)
+    // hex ( 43 44  8  6 43 44  9  7 ) gas     ($NX3X4  $NY0Y1 1) simpleGrading ($grX3X4 1 1)
+    hex ( 43 44  8  6 43 44  9  7 ) gas     ($NX3X4  $NY0Y1 1) edgeGrading ($grX3X4 $grX3X4 $grX3X4 $grX3X4 1 1 1 1 1 1 1 1)
+    
+    // // Nozzle (Y1 -> Y2)
+    hex (  0  2 12 10  1  3 13 11 ) nozzle  ($NX0X1  $NY1Y2 1) simpleGrading ($grX0X1 $nozzleGradingY 1)
+    // hex (  2  4 14 12  3  5 15 13 ) gas     ($NX1X2  $NY1Y2 1) simpleGrading ($grX1X2 $nozzleGradingY 1)
+    hex (  2  4 14 12  3  5 15 13 ) gas     ($NX1X2  $NY1Y2 1) edgeGrading   ($grX1X2 $grX1X2 $grX1X2 $grX1X2 $nozzleGradingY 1 1 $nozzleGradingY 1 1 1 1)
+    hex (  4  6 16 14  5  7 17 15 ) gas     ($NX2X3  $NY1Y2 1) simpleGrading (1       1 1)
+    hex (  6  8 18 16  7  9 19 17 ) gas     ($NX3X4  $NY1Y2 1) simpleGrading ($grX3X4 1 1)
+
+    // Above the nozzle (Y2 -> Y3)
+    hex ( 10 12 22 20 11 13 23 21 ) gas     ($NX0X1 $NY2Y3 1) simpleGrading ($grX0X1 $grY2Y3 1)
+    hex ( 12 14 24 22 13 15 25 23 ) gas     ($NX1X2 $NY2Y3 1) edgeGrading ($grX1X2 $grX1X2 $grX1X2 $grX1X2 $grY2Y3 1 1 $grY2Y3 1 1 1 1)
+    hex ( 14 16 26 24 15 17 27 25 ) gas     ($NX2X3 $NY2Y3 1) simpleGrading (1 1 1)
+    hex ( 16 18 28 26 17 19 29 27 ) gas     ($NX3X4 $NY2Y3 1) simpleGrading ($grX3X4 1 1)
+
+    // Far-field region (Y3 -> Y4)
+    // hex ( 20 22 32 30 21 23 33 31 ) gas     ($NX0X1 $NY3Y4 1) edgeGrading ($grX0X1 $grX0X1 $grX0X1 $grX0X1 1 1 1 1 1 1 1 1)
+    // hex ( 22 24 34 32 23 25 35 33 ) gas     ($NX1X2 $NY3Y4 1) edgeGrading (1 1 1 1 1 $grY3Y4 $grY3Y4 1 1 1 1 1)
+    // hex ( 24 26 36 34 25 27 37 35 ) gas     ($NX2X3 $NY3Y4 1) simpleGrading (1 $grY3Y4 1)
+    // hex ( 26 28 38 36 27 29 39 37 ) gas     ($NX3X4 $NY3Y4 1) simpleGrading ($grX3X4 $grY3Y4 1)
+
+    hex ( 20 22 32 30 21 23 33 31 ) gas     ($NX0X1 $NY3Y4 1) edgeGrading ($grX0X1 $grX0X1 $grX0X1 $grX0X1 $grY3Y4X2 $grY3Y4X2 $grY3Y4X2 $grY3Y4X2 1 1 1 1)
+    hex ( 22 24 34 32 23 25 35 33 ) gas     ($NX1X2 $NY3Y4 1) edgeGrading ($grX1X2 $grX1X2 $grX1X2 $grX1X2 $grY3Y4X2 $grY3Y4 $grY3Y4 $grY3Y4X2 1 1 1 1)
+    hex ( 24 26 36 34 25 27 37 35 ) gas     ($NX2X3 $NY3Y4 1) simpleGrading (1 $grY3Y4 1)
+    hex ( 26 28 38 36 27 29 39 37 ) gas     ($NX3X4 $NY3Y4 1) simpleGrading ($grX3X4 $grY3Y4 1)
+    // hex ( 26 28 38 36 27 29 39 37 ) gas     ($NX3X4 $NY3Y4 1) edgeGrading ($grX3X4 $grX3X4 $grX3X4 $grX3X4 $grY3Y4 1 1 $grY3Y4 1 1 1 1)
+);
+
+// It is hard to tell whether the arc is needed or not
+// Yarc1 #calc "$Y1+0.6*($Y1uni-$Y1)";
+// Yarc2 #calc "$Y2+0.6*($Y2uni-$Y2)";
+
+// Zarc1pos #calc " $Yarc1 * sin(degToRad($angleDeg / 2.))";
+// Zarc1neg #calc "-$Yarc1 * sin(degToRad($angleDeg / 2.))";
+// Zarc2pos #calc " $Yarc2 * sin(degToRad($angleDeg / 2.))";
+// Zarc2neg #calc "-$Yarc2 * sin(degToRad($angleDeg / 2.))";
+
+edges
+(
+    // arc 2 4 (#calc "($X1+$X2)/2" $Yarc1 $Zarc1neg)
+    // arc 3 5 (#calc "($X1+$X2)/2" $Yarc1 $Zarc1pos)
+
+    // arc 12 14 (#calc "($X1+$X2)/2" $Yarc2 $Zarc2neg)
+    // arc 13 15 (#calc "($X1+$X2)/2" $Yarc2 $Zarc2pos)
+);
+
+boundary
+(
+    inletMain
+    {
+        type patch;
+        faces
+        (
+            (40 1 0 40)
+        );
+    }
+    inletAir
+    {
+        type patch;
+        faces
+        (
+            (10 11 21 20)
+            (20 21 31 30)
+        );
+    }
+    side
+    {
+        type patch;
+        faces
+        (
+            (30 31 33 32)
+            (32 33 35 34)
+            (34 35 37 36)
+            (36 37 39 38)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (38 39 29 28)
+            (28 29 19 18)
+            (18 19 9 8)
+            (44 8 9 44)
+        );
+    }
+    axis
+    {
+        type empty;
+        faces
+        (
+            (40 41 40 41)
+            (41 42 41 42)
+            (42 43 42 43)
+            (43 44 43 44)
+        );
+    }
+    nozzleBoundary
+    {
+        type wall;
+        faces
+        (
+            (0 1 11 10)
+        );
+    }
+    frontAndBack_pos
+    {
+        type wedge;
+        faces
+        (
+            (40 41 3 1)
+            (41 42 5 3)
+            (42 43 7 5)
+            (43 44 9 7)
+
+            (1 3 13 11)
+            (3 5 15 13)
+            (5 7 17 15)
+            (7 9 19 17)
+
+            (11 13 23 21)
+            (13 15 25 23)
+            (15 17 27 25)
+            (17 19 29 27)
+
+            (21 23 33 31)
+            (23 25 35 33)
+            (25 27 37 35)
+            (27 29 39 37)
+        );
+    }
+    frontAndBack_neg
+    {
+        type wedge;
+        faces
+        (
+            (40 41 2 0)
+            (41 42 4 2)
+            (42 43 6 4)
+            (43 44 8 6)
+
+            (0 2 12 10)
+            (2 4 14 12)
+            (4 6 16 14)
+            (6 8 18 16)
+
+            (10 12 22 20)
+            (12 14 24 22)
+            (14 16 26 24)
+            (16 18 28 26)
+
+            (20 22 32 30)
+            (22 24 34 32)
+            (24 26 36 34)
+            (26 28 38 36)
+        );
+    }
+);
+
+mergePatchPairs
+(
+);
+
+// ************************************************************************* //

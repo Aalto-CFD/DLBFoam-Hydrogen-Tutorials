@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf 0
+rm -rf constant/polyMesh
+rm -rf constant/gas/polyMesh
+rm -rf constant/nozzle/polyMesh
+rm -rf processor*

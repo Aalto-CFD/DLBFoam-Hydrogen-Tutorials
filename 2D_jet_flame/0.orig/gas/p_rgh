@@ -1,0 +1,70 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "0/gas";
+    object      p_rgh;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// g               9.81;    // [m/s^2]
+// rho_air_300K    1.16823; // [kg/m^3] (from thermo)
+// gamma_air       1.39848;
+// gamma_burnt     1.26;
+// Note that gamma values are different for ambient air (1.39848) and burnt gases (~1.26)
+
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    inletMain
+    {
+        type            fixedFluxPressure;
+        value           $internalField;
+    }
+
+    inletAir
+    {
+        type            fixedFluxPressure;
+        value           $internalField;
+    }
+
+    side
+    {
+        type            fixedFluxPressure;
+        value           $internalField;
+    }
+    
+    outlet
+    {
+        type            prghTotalPressure;
+        p0 $internalField;
+    }
+
+    gas_to_nozzle
+    {
+        type            zeroGradient;
+    }
+
+    "frontAndBack.*"
+    {
+        type            wedge;
+    }
+
+    axis
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //

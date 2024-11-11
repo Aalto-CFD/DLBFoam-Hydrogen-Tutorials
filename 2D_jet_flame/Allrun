@@ -1,0 +1,59 @@
+#!/bin/bash -e
+
+function cloneAndSetICBC() {
+    local specieName="$1"
+    shift
+    local Yi=("$@")
+    echo "[$0] for $specieName with coeffs:"
+    for i in "${Yi[@]}";
+    do
+        echo -n "$i "
+    done
+    echo
+    cp 0/gas/Yi.mytemplate 0/gas/$specieName
+
+    foamDictionary -expand -entry FoamFile/object                   -set $specieName 0/gas/$specieName
+    foamDictionary -expand -entry internalField                     -set "uniform ${Yi[0]}" 0/gas/$specieName
+    foamDictionary -expand -entry boundaryField/inletMain/value     -set "uniform ${Yi[1]}" 0/gas/$specieName
+    foamDictionary -expand -entry boundaryField/inletAir/value      -set "uniform ${Yi[0]}" 0/gas/$specieName
+    foamDictionary -expand -entry boundaryField/side/value          -set "uniform ${Yi[0]}" 0/gas/$specieName
+    foamDictionary -expand -entry boundaryField/outlet/inletValue   -set "uniform ${Yi[0]}" 0/gas/$specieName
+}
+
+function removeICBC() {
+    local delspecies=("$@")
+    for name in "${delspecies[@]}";
+    do
+        rm -f 0/gas/$name
+    done
+}
+
+./Allclean
+./Allmesh
+
+cp -r 0.orig/gas/* 0/gas/
+cp -r 0.orig/nozzle/* 0/nozzle/
+
+species=(H2 O2 N2)
+
+#    | IC  | Main jet BC | Lateral BC      | Air coflow BC |
+  H2=( 0     1.0           0                 0             )
+  O2=( 0.233 0             0.233             0.233         )
+  N2=( 0.767 0             0.767             0.767         )
+
+removeICBC "${species[@]}"
+
+cloneAndSetICBC   H2 "${H2[@]}"
+cloneAndSetICBC   O2 "${O2[@]}"
+cloneAndSetICBC   N2 "${N2[@]}"
+
+setFields -region gas
+# mapFields -consistent -sourceRegion gas -targetRegion gas -sourceTime OTHER_CASE_TIME OTHER_CASE_PATH
+
+foamDictionary -entry method -set scotch system/decomposeParDict
+decomposePar -region gas #-fileHandler collated -ioRanks '( 0 128 256 384 512 640 768 896 1024 )'
+foamDictionary -entry method -set manual system/decomposeParDict
+decomposePar -region nozzle #-fileHandler collated -ioRanks '( 0 128 256 384 512 640 768 896 1024 )'
+
+N_PROCS=$(foamDictionary -entry numberOfSubdomains -value system/decomposeParDict)
+mpirun -np $N_PROCS chtMultiRegionFoam -parallel | tee log.chtMultiRegionFoam

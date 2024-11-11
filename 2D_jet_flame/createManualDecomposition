@@ -1,0 +1,59 @@
+#!/bin/bash
+# Simple decomposition in x-direction.
+# Needed to be able to use smaller number of processors for the nozzle region
+
+NPROCS=$1
+FILEPATH=constant/nozzle/manualDecomposition
+
+if [ -z "$NPROCS" ]; then
+    echo "Usage: $0 NPROCS"
+    exit 1
+fi
+
+function isInt() {
+    if ! [[ $1 =~ ^[0-9]+$ ]]; then
+        echo "$1 is not an integer"
+        exit 1
+    fi
+}
+
+NCELLSX=$(foamDictionary -expand -entry NX0X1 -value system/blockMeshDict | tail -n 1)
+NCELLSY=$(foamDictionary -expand -entry NY1Y2 -value system/blockMeshDict | tail -n 1)
+
+isInt $NPROCS
+isInt $NCELLSX
+isInt $NCELLSY
+
+NCELLS=$(($NCELLSX * $NCELLSY))
+
+cat > $FILEPATH <<EOF
+/*--------------------------------*- C++ -*----------------------------------*\\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       labelList;
+    location    "constant";
+    object      cellDecomposition;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+EOF
+
+echo "$NCELLS(" >> $FILEPATH
+for i in $(seq 1 $NCELLS); do
+    # processor is (i/NCELLSX)%NPROCS
+    proc=$(( (($i-1) % $NCELLSX ) * $NPROCS / $NCELLSX  ))
+    echo "    $proc"  >> $FILEPATH
+done
+
+echo ")" >> $FILEPATH
+echo >> $FILEPATH
+
+# write end of file
+echo "// ************************************************************************* //" >> $FILEPATH

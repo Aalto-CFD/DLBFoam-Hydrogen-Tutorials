@@ -1,0 +1,58 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version         2;
+    format          ascii;
+    class           dictionary;
+    location        "constant";
+    object          chemistryProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+chemistry       on;
+
+initialChemicalTimeStep 1;
+
+chemistryType
+{
+    solver          ode_pyJac;
+    method          loadBalanced_pyJac;
+    // solver          ode;
+    // method          chemistryModel;
+}
+
+odeCoeffs
+{
+    solver          seulex_LAPACK;
+    // solver          seulex;
+    absTol          1e-08;
+    relTol          0.1;
+}
+
+loadbalancing
+{
+    active          true;
+    log             false;
+}
+
+refmapping
+{
+    active          true;
+    mixtureFractionProperties
+    {
+        #include "mixtureFractionProperties"
+    }
+    tolerance       0.0001;
+    deltaT          2;
+}
+
+reactions {
+}
+
+// ************************************************************************* //

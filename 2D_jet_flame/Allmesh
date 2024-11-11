@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+blockMesh
+splitMeshRegions -cellZonesOnly -overwrite
+topoSet -region gas

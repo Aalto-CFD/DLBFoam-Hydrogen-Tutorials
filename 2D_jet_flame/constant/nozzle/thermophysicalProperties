@@ -1,0 +1,81 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant/nozzle";
+    object      thermophysicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+thermoType
+{
+    type            heSolidThermo;
+    mixture         pureMixture;
+    transport       tabulatedSolid;
+    thermo          eIcoTabulated;
+    equationOfState rhoConst;
+    specie          specie;
+    energy          sensibleInternalEnergy;
+}
+
+mixture
+{
+    // Stainless steel AISI/SAE 304
+    specie
+    {
+        //  Fe          Cr        Ni
+        // (68*55.845 + 18.5*52 + 9.25*58.7) / ((68+18.5+9.25))
+        molWeight       55.4;
+    }
+    equationOfState
+    {
+        rho             8000;
+    }
+    transport
+    {
+        // Bogaard 1985
+        kappa
+        {
+            values // [W/(m·K)]
+            (
+                (250 13.99)
+                (273 14.44)
+                (293 14.79)
+                (300 14.92)
+                (350 15.71)
+                (400 16.43)
+                (450 17.13)
+                (500 17.93)
+                (550 18.81)
+                (600 19.67)
+                (700 21.31)
+                (800 22.81)
+                (900 24.28)
+            );
+        }
+    }
+    thermodynamics
+    {
+        // Steel heat capacity
+        // Mills 2002
+        Hf              0;
+        Sf              0;
+        Cv
+        {
+            values // [J/(kg·K)], rough estimate from Fig. on p.128
+            (
+                (200  510)
+                (1000 640)
+            );
+        }
+    }
+}
+
+// ************************************************************************* //

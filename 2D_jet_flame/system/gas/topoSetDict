@@ -1,0 +1,42 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+D_nozzle_i 0.001;   // [m]  - nozzle orifice wall thickness
+D_nozzle_o 0.00134; // [m]  - nozzle outer diameter
+
+X_ignition 0.005;   // [m]  - axial coordinate of ignition region location
+Y_ignition 0.0009;  // [m]  - radia coordinate of ignition region location
+R_ignition 0.0004;  // [m]  - radius of the ignition region
+
+Hwall2_pos #calc " + $D_nozzle_o / 2 ";
+Hwall2_neg #calc " - $D_nozzle_o / 2 ";
+
+actions
+(
+    {
+        name    ignitionCells;
+        type    cellSet;
+        action  new;
+        source  sphereToCell;
+        sourceInfo
+        {
+            centre      ($X_ignition $Y_ignition 0);
+            radius      $R_ignition;
+        }
+    }
+);
+
+// ************************************************************************* //

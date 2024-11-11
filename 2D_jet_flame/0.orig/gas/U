@@ -1,0 +1,76 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    location    "0/gas";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0.2 0 0);
+
+boundaryField
+{
+    inletMain
+    {
+        type            flowRateInletVelocity;
+        // meanVelocity    36; 
+        // due to difference in calculated density of hydrogen in the paper
+        // and my calculation, I use here massFlowRate instead of meanVelocity
+        // Wedge opening angle is 5, so 360/5 = 72
+        massFlowRate    #calc "2.336e-6 / 72"; // [kg/s]
+        profile         laminarBL;
+        // needed for decomposition, it not used, according to
+        // flowRateInletVelocityFvPatchVectorField.C:L102
+        // Taken from thermo for H2 at 300 K
+        rhoInlet        0.0816312; 
+    }
+
+    inletAir
+    {
+        type            fixedValue;
+        value           $internalField;
+    }
+    
+    side
+    {
+        // Freestream worked poorly with p_rhg, and in OpenFOAM 10 
+        // CHT solver have to use it. It is easier to use fixedValue
+        // and move the domain boundaries
+        type            fixedValue;
+        value           $internalField;
+    }
+
+    outlet
+    {
+        type            pressureInletOutletVelocity;
+        value           $internalField;
+    }
+
+    gas_to_nozzle
+    {
+        type            noSlip;
+    }
+
+    "frontAndBack.*"
+    {
+        type            wedge;
+    }
+
+    axis
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //
