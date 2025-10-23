@@ -1,0 +1,192 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |				
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9                                   	
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      sample;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+type sets;
+libs ("libsampling.so");
+
+interpolationScheme cellPoint;
+
+setFormat csv;
+
+sets
+(
+
+
+    x=5_OneP
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.00641405);
+        end             (0 0.05  0.00641405);
+    }
+
+
+    x=5
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.00541405);
+        end             (0 0.05  0.00541405);
+    }
+
+    x=5_OneN
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.00441405);
+        end             (0 0.05  0.00441405);
+    }
+
+
+    x=9_OneP
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.01035154);
+        end             (0 0.05  0.01035154);
+    }
+
+    
+
+    x=9
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.00935154);
+        end             (0 0.05  0.00935154);
+    }
+
+    x=9_OneN
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.00835154);
+        end             (0 0.05  0.00835154);
+    }
+
+
+
+    x=21_OneP
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.022164);
+        end             (0 0.05  0.022164);
+    }
+
+
+
+    x=21
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.021164);
+        end             (0 0.05  0.021164);
+    }
+
+
+    x=21_OneN
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.020164);
+        end             (0 0.05  0.020164);
+    }
+
+
+
+    x=40_OneP
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.0418515);
+        end             (0 0.05  0.0418515);
+    }
+
+
+    x=40
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.0408515);
+        end             (0 0.05  0.0408515);
+    }
+
+
+    x=40_OneN
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.0398515);
+        end             (0 0.05  0.0398515);
+    }
+
+
+/*
+    x=35
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.0349452);
+        end             (0 0.05  0.0349452);
+    }
+    x=90
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (0 -0.05 0.0900701);
+        end             (0 0.05  0.0900701);
+    }
+*/
+/*
+    measuringPoints
+    {
+        //type cloud;
+        type points;
+        axis xyz;
+	ordered on;
+
+        points          
+        (
+	    #include "./system/measuringPoints"
+        );
+
+    }
+
+    reattachment
+    {
+        type            lineCell;
+        axis            xyz;
+        start           (  0 1e-6 1);
+        end             ( 15 1e-6 1);
+    }
+    */
+);
+
+fields
+(
+   // U
+   // k
+    UMean
+    UPrime2Mean
+    TMean
+    OHMean
+    X_OHMean
+    H2OMean
+    NOMean
+    O2Mean
+);
+
+// ************************************************************************* //

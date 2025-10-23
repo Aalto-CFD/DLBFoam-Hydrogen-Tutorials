@@ -1,0 +1,81 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |				
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9                                   	
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     reactingFoam;
+
+startFrom       latestTime;
+
+startTime       0.35;
+
+stopAt          endTime;
+
+endTime         0.4;	
+
+deltaT          1e-6;
+
+writeControl    timeStep; 
+
+writeInterval   200;
+
+purgeWrite      2;
+
+writeFormat     binary;	
+
+writePrecision  6;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+OptimisationSwitches
+{
+    fileHandler collated;
+    maxThreadFileBufferSize 5e9;
+}
+
+
+libs
+(
+
+    "libFickianTransport.so"
+
+
+    "libchemistryModel_DLB.so"
+    "libODE_DLB.so"
+    "../dlbfoam/lib/build/libc_pyjac.so"
+
+
+     "libBilgerMixtureFraction.so"
+);
+
+
+
+
+// ************************************************************************* //
+
+///////////////////////////////////////////////////////////////////////////
+functions
+{
+}
+
+
+///////////////////////////////////////////////////////////////////////////
+
+

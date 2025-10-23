@@ -1,0 +1,114 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      chemistryProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+
+chemistryType
+{
+
+    solver          ode_pyJac;
+    method          loadBalanced_pyJac;
+}
+
+
+refmapping
+{
+    active  false;
+
+    mixtureFractionProperties
+    {
+        // mixtureFraction class does not allow to redefine mixture fraction
+        // equation. So here we have to use Bilger's definition.
+        // In postprocessing it is recalculated in the way it is defined
+        // in Sandia Flame experiment.
+        oxidizerMassFractions // air coflow (humid air)
+        {
+            N2 0.77;
+            O2 0.23;
+            // H2O 0; // assume infinitesimal compared to N2 and O2
+        }
+
+        fuelMassFractions // main jet
+        {
+            H2 1;
+            // CH4 0.1561;
+            // N2 0.6473;
+            // O2 0.1966;
+        }
+
+        #include "../dlbfoam/foam/thermo.foam"
+    }
+    tolerance 1e-4;
+    deltaT 1;
+}
+
+chemistry       on;
+
+initialChemicalTimeStep 1e-07;
+
+
+loadbalancing
+{
+    active true;
+    log	true;
+}
+
+
+/*
+
+odeCoeffs
+{
+    solver          seulex;
+    eps             0.05;
+}
+*/
+
+odeCoeffs
+{
+    solver          seulex_LAPACK;
+    absTol          1e-08;
+    relTol          1e-05;
+}
+
+
+LewisNumbers
+{
+
+
+N2       1.6354673587438848;
+H2       0.37734455944612455;
+H        0.2627941595431559;
+O2       1.4865093201650095;
+O        0.9403304479213148;
+H2O      1.211624408737783;
+OH       0.9570973689839551;
+H2O2     1.459265800791943;
+HO2      1.4500552409942493;
+NO       1.4728027570754842;
+N2O      1.8723366971368585;
+N        1.0591680388407074;
+NH       0.8930019530330502;
+NNH      1.486717659884338;
+NH2      0.9105557094068336;
+
+}
+
+#include "reactionsCap"
+
+
+//#include "/scratch/vavuorin/haideral/mechansim/capsuro/cap2/foam/reactions.foam"
+
+// ************************************************************************* //

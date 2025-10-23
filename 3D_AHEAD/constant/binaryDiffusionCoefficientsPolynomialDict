@@ -1,0 +1,855 @@
+H2-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.86523358e-03  4.52798836e-03 -8.65421181e-04  7.99297085e-05
+ -2.63779618e-06);
+}
+H-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.49468121e-02  1.39461159e-02 -2.60119287e-03  2.25209466e-04
+ -7.13154353e-06);
+}
+H-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.51249600e-02  2.15831657e-02 -3.42299369e-03  2.47808166e-04
+ -6.29868423e-06);
+}
+O-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-9.16991891e-03  5.42436446e-03 -1.03220953e-03  9.20744681e-05
+ -2.98578171e-06);
+}
+O-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.66902779e-02  1.39316113e-02 -2.47459083e-03  2.02783965e-04
+ -6.07798931e-06);
+}
+O-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.20062624e-03  3.41945631e-03 -6.33071971e-04  5.43126593e-05
+ -1.70559656e-06);
+}
+O2-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-8.07854500e-03  4.64078808e-03 -8.75964803e-04  7.70576988e-05
+ -2.47326909e-06);
+}
+O2-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.97891906e-02  9.98456422e-03 -1.70879646e-03  1.34700402e-04
+ -3.85790470e-06);
+}
+O2-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.56228927e-03  2.45108413e-03 -4.46262181e-04  3.75503481e-05
+ -1.15747160e-06);
+}
+O2-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.12728994e-03  1.63323219e-03 -2.90232447e-04  2.37951542e-05
+ -7.13575446e-07);
+}
+OH-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-9.13945774e-03  5.40634550e-03 -1.02878067e-03  9.17686099e-05
+ -2.97586337e-06);
+}
+OH-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.66433565e-02  1.39071196e-02 -2.47024052e-03  2.02427472e-04
+ -6.06730423e-06);
+}
+OH-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.10805794e-03  3.36840772e-03 -6.23620925e-04  5.35018330e-05
+ -1.68013394e-06);
+}
+OH-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.47124566e-03  2.40217106e-03 -4.37356714e-04  3.68010052e-05
+ -1.13437346e-06);
+}
+OH-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.01406500e-03  3.31657348e-03 -6.14024427e-04  5.26785280e-05
+ -1.65427945e-06);
+}
+H2O-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-9.70132628e-03  4.01432390e-03 -4.67910959e-04  1.93808527e-05
+  9.24102355e-08);
+}
+H2O-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 3.17826810e-02 -2.19447099e-02  5.45275491e-03 -5.57868753e-04
+  2.08125738e-05);
+}
+H2O-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-5.57285609e-04 -5.66770960e-04  3.23108293e-04 -4.30681361e-05
+  1.89132974e-06);
+}
+H2O-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 4.41685501e-03 -3.17757439e-03  8.13376455e-04 -8.45423101e-05
+  3.19136078e-06);
+}
+H2O-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-5.48468904e-04 -5.57804189e-04  3.17996461e-04 -4.23867636e-05
+  1.86140739e-06);
+}
+H2O-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 8.15369192e-03 -3.95028726e-03  6.41513365e-04 -3.49018256e-05
+  3.21842467e-07);
+}
+HO2-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-8.07123024e-03  4.63658605e-03 -8.75171656e-04  7.69879265e-05
+ -2.47102965e-06);
+}
+HO2-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.97799599e-02  9.97990690e-03 -1.70799939e-03  1.34637571e-04
+ -3.85610518e-06);
+}
+HO2-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.53900789e-03  2.43857624e-03 -4.43984904e-04  3.73587286e-05
+ -1.15156501e-06);
+}
+HO2-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.10332130e-03  1.62071453e-03 -2.88008005e-04  2.36127799e-05
+ -7.08106356e-07);
+}
+HO2-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.44748772e-03  2.38940714e-03 -4.35032821e-04  3.66054632e-05
+ -1.12834597e-06);
+}
+HO2-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 2.10211513e-03 -1.82814984e-03  5.25203076e-04 -5.76580322e-05
+  2.26187776e-06);
+}
+HO2-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.07916610e-03  1.60809944e-03 -2.85766248e-04  2.34289860e-05
+ -7.02594696e-07);
+}
+H2O2-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-8.06434296e-03  4.63262960e-03 -8.74424862e-04  7.69222318e-05
+ -2.46892110e-06);
+}
+H2O2-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.97712724e-02  9.97552364e-03 -1.70724923e-03  1.34578437e-04
+ -3.85441154e-06);
+}
+H2O2-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.51699685e-03  2.42675083e-03 -4.41831885e-04  3.71775647e-05
+ -1.14598072e-06);
+}
+H2O2-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.08060305e-03  1.60884989e-03 -2.85899607e-04  2.34399196e-05
+ -7.02922575e-07);
+}
+H2O2-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.42502146e-03  2.37733717e-03 -4.32835275e-04  3.64205526e-05
+ -1.12264619e-06);
+}
+H2O2-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 2.09108819e-03 -1.81856002e-03  5.22448048e-04 -5.73555788e-05
+  2.25001276e-06);
+}
+H2O2-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.05626830e-03  1.59614102e-03 -2.83641187e-04  2.32547595e-05
+ -6.97369946e-07);
+}
+H2O2-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.03319765e-03  1.58409234e-03 -2.81500083e-04  2.30792179e-05
+ -6.92105756e-07);
+}
+N-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-7.20161089e-03  4.31464139e-03 -8.22608950e-04  7.37456428e-05
+ -2.39886304e-06);
+}
+N-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.11025334e-02  1.11288841e-02 -1.99245991e-03  1.64714950e-04
+ -4.98156181e-06);
+}
+N-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-5.08641691e-03  2.83376367e-03 -5.27200541e-04  4.55193612e-05
+ -1.43746038e-06);
+}
+N-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.92349985e-03  2.12960409e-03 -3.90523873e-04  3.31273809e-05
+ -1.02933463e-06);
+}
+N-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-5.01555915e-03  2.79428712e-03 -5.19856226e-04  4.48852410e-05
+ -1.41743543e-06);
+}
+N-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.51751233e-03  1.38942775e-04  1.40715651e-04 -2.39740784e-05
+  1.16704061e-06);
+}
+N-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.90521613e-03  2.11968002e-03 -3.88704011e-04  3.29730056e-05
+ -1.02453788e-06);
+}
+N-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.88793760e-03  2.11030155e-03 -3.86984200e-04  3.28271173e-05
+ -1.02000484e-06);
+}
+N-N {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.33177936e-03  2.43880569e-03 -4.57274253e-04  3.98122237e-05
+ -1.26772223e-06);
+}
+NH-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-9.53691506e-03  5.64145699e-03 -1.07352035e-03  9.57594490e-05
+ -3.10527791e-06);
+}
+NH-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.78921290e-02  1.45589455e-02 -2.58602054e-03  2.11915236e-04
+ -6.35167842e-06);
+}
+NH-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.53694210e-03  3.60492426e-03 -6.67409171e-04  5.72585245e-05
+ -1.79810644e-06);
+}
+NH-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.81475136e-03  2.58671907e-03 -4.70956864e-04  3.96282610e-05
+ -1.22152227e-06);
+}
+NH-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.44247196e-03  3.55282686e-03 -6.57763952e-04  5.64310396e-05
+ -1.77212069e-06);
+}
+NH-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-5.88654572e-04 -5.98673843e-04  3.41295686e-04 -4.54923917e-05
+  1.99779051e-06);
+}
+NH-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.79121270e-03  2.57407295e-03 -4.68654420e-04  3.94345238e-05
+ -1.21555041e-06);
+}
+NH-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.76896311e-03  2.56211939e-03 -4.66478067e-04  3.92513965e-05
+ -1.20990560e-06);
+}
+NH-N {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-5.33871783e-03  2.97432650e-03 -5.53351205e-04  4.77772525e-05
+ -1.50876255e-06);
+}
+NH-NH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.89275663e-03  3.80114512e-03 -7.03737147e-04  6.03751828e-05
+ -1.89597979e-06);
+}
+NH2-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-9.50133917e-03  5.62041247e-03 -1.06951576e-03  9.54022342e-05
+ -3.09369418e-06);
+}
+NH2-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.78368812e-02  1.45301076e-02 -2.58089823e-03  2.11495481e-04
+ -6.33909722e-06);
+}
+NH2-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.42999634e-03  3.54594693e-03 -6.56490215e-04  5.63217628e-05
+ -1.76868904e-06);
+}
+NH2-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.71054583e-03  2.53073478e-03 -4.60763958e-04  3.87705877e-05
+ -1.19508490e-06);
+}
+NH2-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.33393131e-03  3.49297000e-03 -6.46682161e-04  5.54803079e-05
+ -1.74226458e-06);
+}
+NH2-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 1.13557418e-02 -7.53489219e-03  1.81547259e-03 -1.82523815e-04
+  6.71848519e-06);
+}
+NH2-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.68648381e-03  2.51780749e-03 -4.58410321e-04  3.85725429e-05
+ -1.18898026e-06);
+}
+NH2-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.66373461e-03  2.50558551e-03 -4.56185099e-04  3.83853035e-05
+ -1.18320870e-06);
+}
+NH2-N {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-5.25704527e-03  2.92882477e-03 -5.44885949e-04  4.70463484e-05
+ -1.48568126e-06);
+}
+NH2-NH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.78348541e-03  3.74088537e-03 -6.92580766e-04  5.94180519e-05
+ -1.86592272e-06);
+}
+NH2-NH2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-6.67242493e-03  3.67963891e-03 -6.81241706e-04  5.84452486e-05
+ -1.83537349e-06);
+}
+NH3-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.18515456e-02  5.66007886e-03 -8.95347134e-04  6.46189316e-05
+ -1.63435919e-06);
+}
+NH3-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 1.76869431e-02 -1.34157735e-02  3.55892419e-03 -3.76622978e-04
+  1.44033181e-05);
+}
+NH3-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.14940430e-03  4.74175086e-04  7.76158140e-05 -1.85898834e-05
+  9.96857109e-07);
+}
+NH3-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 1.37906086e-03 -1.36722643e-03  4.18195472e-04 -4.71216929e-05
+  1.88063898e-06);
+}
+NH3-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.11630572e-03  4.66873286e-04  7.64206117e-05 -1.83036186e-05
+  9.81506553e-07);
+}
+NH3-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 1.67153460e-02 -9.36862263e-03  1.91514280e-03 -1.65937735e-04
+  5.27776082e-06);
+}
+NH3-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 5.12310381e-04 -8.51955932e-04  3.06428306e-04 -3.65717123e-05
+  1.51241129e-06);
+}
+NH3-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 5.09720056e-04 -8.47648304e-04  3.04878955e-04 -3.63867998e-05
+  1.50476429e-06);
+}
+NH3-N {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.65027737e-03  8.95176202e-04 -4.01972021e-05 -5.76172060e-06
+  4.96629778e-07);
+}
+NH3-NH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.26459330e-03  4.99586664e-04  8.17753331e-05 -1.95861362e-05
+  1.05027981e-06);
+}
+NH3-NH2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 1.77808650e-03 -1.91244784e-03  6.04878993e-04 -6.90479341e-05
+  2.77876793e-06);
+}
+NH3-NH3 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 1.85317881e-02 -1.07387588e-02  2.28626765e-03 -2.08693604e-04
+  7.03988485e-06);
+}
+NNH-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-5.96533630e-03  3.57396245e-03 -6.81394636e-04  6.10859940e-05
+ -1.98705886e-06);
+}
+NNH-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.73391003e-02  9.14415505e-03 -1.63712392e-03  1.35339629e-04
+ -4.09314835e-06);
+}
+NNH-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.69258575e-03  2.05722722e-03 -3.82731742e-04  3.30456877e-05
+ -1.04355302e-06);
+}
+NNH-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.72145309e-03  1.47715506e-03 -2.70878666e-04  2.29781106e-05
+ -7.13976304e-07);
+}
+NNH-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.62135712e-03  2.01754406e-03 -3.75348986e-04  3.24082484e-05
+ -1.02342326e-06);
+}
+NNH-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.08596360e-03  9.94303594e-05  1.00699066e-04 -1.71563525e-05
+  8.35158695e-07);
+}
+NNH-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.70161594e-03  1.46638781e-03 -2.68904183e-04  2.28106190e-05
+ -7.08772004e-07);
+}
+NNH-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.68282064e-03  1.45618607e-03 -2.67033401e-04  2.26519242e-05
+ -7.03841035e-07);
+}
+NNH-N {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.22257006e-03  1.81431729e-03 -3.40183143e-04  2.96177782e-05
+ -9.43105215e-07);
+}
+NNH-NH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.88761204e-03  2.16588100e-03 -4.02945965e-04  3.47910169e-05
+ -1.09866894e-06);
+}
+NNH-NH2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.80616931e-03  2.12050732e-03 -3.94504532e-04  3.40621697e-05
+ -1.07565260e-06);
+}
+NNH-NH3 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.92133794e-03  6.48964527e-04 -2.91412553e-05 -4.17700144e-06
+  3.60035386e-07);
+}
+NNH-NNH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.26916776e-03  1.27754874e-03 -2.39539438e-04  2.08553130e-05
+ -6.64086090e-07);
+}
+NO-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-7.30694338e-03  4.23801072e-03 -8.01567277e-04  7.08100576e-05
+ -2.27917320e-06);
+}
+NO-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.85313924e-02  9.44413137e-03 -1.63203943e-03  1.30010004e-04
+ -3.76862292e-06);
+}
+NO-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.28146212e-03  2.32026173e-03 -4.25031560e-04  3.60107743e-05
+ -1.11759422e-06);
+}
+NO-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.97594298e-03  1.56780511e-03 -2.80482795e-04  2.31677522e-05
+ -7.00084535e-07);
+}
+NO-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.19789077e-03  2.27497174e-03 -4.16735221e-04  3.53078675e-05
+ -1.09577951e-06);
+}
+NO-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 3.23598338e-03 -2.47271471e-03  6.59083639e-04 -6.99095752e-05
+  2.67800878e-06);
+}
+NO-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.95386984e-03  1.55617640e-03 -2.78402400e-04  2.29959125e-05
+ -6.94891872e-07);
+}
+NO-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.93295332e-03  1.54515703e-03 -2.76431017e-04  2.28330771e-05
+ -6.89971304e-07);
+}
+NO-N {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.68495677e-03  2.01722036e-03 -3.71959701e-04  3.17532516e-05
+ -9.92660387e-07);
+}
+NO-NH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.51255508e-03  2.44549843e-03 -4.47972742e-04  3.79544647e-05
+ -1.17791664e-06);
+}
+NO-NH2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.41693969e-03  2.39368138e-03 -4.38480761e-04  3.71502571e-05
+ -1.15295807e-06);
+}
+NO-NH3 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 5.72549687e-04 -8.73799487e-04  3.08050751e-04 -3.65291269e-05
+  1.50487681e-06);
+}
+NO-NNH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.57855120e-03  1.41155143e-03 -2.60279074e-04  2.22193611e-05
+ -6.94614835e-07);
+}
+NO-NO {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.85690915e-03  1.51939916e-03 -2.74121249e-04  2.28454828e-05
+ -6.96995816e-07);
+}
+NO2-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-9.73733147e-03  5.28956011e-03 -9.70540703e-04  8.23817267e-05
+ -2.56137897e-06);
+}
+NO2-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.27455892e-02  5.27882856e-03 -6.16797224e-04  2.57211894e-05
+  1.10424370e-07);
+}
+NO2-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.39035113e-03  2.20661013e-03 -3.75829764e-04  2.94742865e-05
+ -8.38740456e-07);
+}
+NO2-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.50765656e-03  1.19096167e-03 -1.86555315e-04  1.33048442e-05
+ -3.30018921e-07);
+}
+NO2-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.29273023e-03  2.15754543e-03 -3.67473066e-04  2.88189161e-05
+ -8.20090787e-07);
+}
+NO2-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 8.70965136e-03 -5.54415064e-03  1.29098976e-03 -1.27139297e-04
+  4.60356674e-06);
+}
+NO2-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.48497001e-03  1.18018715e-03 -1.84867566e-04  1.31844764e-05
+ -3.27033269e-07);
+}
+NO2-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.46343738e-03  1.16996065e-03 -1.83265661e-04  1.30702310e-05
+ -3.24199478e-07);
+}
+NO2-N {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.88077728e-03  1.97530004e-03 -3.40834318e-04  2.71088056e-05
+ -7.84309678e-07);
+}
+NO2-NH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.64321782e-03  2.33370206e-03 -3.97476057e-04  3.11718877e-05
+ -8.87048556e-07);
+}
+NO2-NH2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.53176725e-03  2.27768651e-03 -3.87935490e-04  3.04236729e-05
+ -8.65756843e-07);
+}
+NO2-NH3 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 6.12893364e-03 -4.04578026e-03  9.70759559e-04 -9.73599032e-05
+  3.57683274e-06);
+}
+NO2-NNH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.61560378e-03  1.33133181e-03 -2.29718809e-04  1.82710549e-05
+ -5.28616618e-07);
+}
+NO2-NO {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.60852400e-03  1.27022369e-03 -2.07329717e-04  1.55180693e-05
+ -4.14815030e-07);
+}
+NO2-NO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-7.13929450e-04  1.07284049e-04  4.77858533e-05 -8.95234293e-06
+  4.49659374e-07);
+}
+N2O-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-9.11709291e-03  4.88498395e-03 -8.87346250e-04  7.44816952e-05
+ -2.28991327e-06);
+}
+N2O-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-8.71677568e-03  3.06220869e-03 -1.83930788e-04 -1.24094732e-05
+  1.35382695e-06);
+}
+N2O-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.85449855e-03  1.89244960e-03 -3.12469733e-04  2.36922309e-05
+ -6.44862287e-07);
+}
+N2O-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.01132941e-03  9.02956775e-04 -1.27252966e-04  7.83389400e-06
+ -1.43341290e-07);
+}
+N2O-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.76979298e-03  1.85086156e-03 -3.05602971e-04  2.31715759e-05
+ -6.30690942e-07);
+}
+N2O-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 9.34844636e-03 -5.82665921e-03  1.33207709e-03 -1.29586751e-04
+  4.64427351e-06);
+}
+N2O-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.99346625e-03  8.94937374e-04 -1.26122798e-04  7.76431908e-06
+ -1.42068237e-07);
+}
+N2O-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.97651447e-03  8.87327121e-04 -1.25050291e-04  7.69829387e-06
+ -1.40860136e-07);
+}
+N2O-N {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.54615290e-03  1.77293928e-03 -2.99949629e-04  2.33560610e-05
+ -6.58629039e-07);
+}
+N2O-NH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.06881058e-03  1.99767074e-03 -3.29843206e-04  2.50095307e-05
+ -6.80716951e-07);
+}
+N2O-NH2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.97223619e-03  1.95025545e-03 -3.22014283e-04  2.44159223e-05
+ -6.64559938e-07);
+}
+N2O-NH3 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 7.09220100e-03 -4.53258655e-03  1.05902367e-03 -1.04519202e-04
+  3.79115236e-06);
+}
+N2O-NNH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.41346520e-03  1.20663925e-03 -2.04141788e-04  1.58958291e-05
+ -4.48254295e-07);
+}
+N2O-NO {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.11586153e-03  9.83719049e-04 -1.48146925e-04  1.00454148e-05
+ -2.27655281e-07);
+}
+N2O-NO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.31852078e-04 -2.16046700e-04  1.12445894e-04 -1.47329475e-05
+  6.41388182e-07);
+}
+N2O-N2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 4.28415802e-04 -5.24784372e-04  1.73835076e-04 -2.01822108e-05
+  8.20849002e-07);
+}
+HNO-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-8.31721492e-03  4.74075998e-03 -8.92771084e-04  7.82360946e-05
+ -2.50395594e-06);
+}
+HNO-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.92713749e-02  9.60717061e-03 -1.61934607e-03  1.25591558e-04
+ -3.52349149e-06);
+}
+HNO-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.57681919e-03  2.43863934e-03 -4.40713817e-04  3.67951290e-05
+ -1.12475473e-06);
+}
+HNO-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.12087259e-03  1.61487068e-03 -2.84190088e-04  2.30655785e-05
+ -6.83766178e-07);
+}
+HNO-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.48645108e-03  2.39048903e-03 -4.32012036e-04  3.60686186e-05
+ -1.10254673e-06);
+}
+HNO-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 2.95723133e-03 -2.32302528e-03  6.30008234e-04 -6.73853468e-05
+  2.59662593e-06);
+}
+HNO-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.09732809e-03  1.60268777e-03 -2.82046100e-04  2.28915671e-05
+ -6.78607706e-07);
+}
+HNO-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.07501451e-03  1.59114178e-03 -2.80014200e-04  2.27266531e-05
+ -6.73718922e-07);
+}
+HNO-N {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.98929006e-03  2.14956984e-03 -3.92309470e-04  3.30963426e-05
+ -1.02293362e-06);
+}
+HNO-NH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.82816606e-03  2.57256299e-03 -4.64916660e-04  3.88158206e-05
+ -1.18652330e-06);
+}
+HNO-NH2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.72472992e-03  2.51744973e-03 -4.54956525e-04  3.79842505e-05
+ -1.16110383e-06);
+}
+HNO-NH3 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 1.17743528e-03 -1.24177642e-03  3.89733120e-04 -4.43580971e-05
+  1.78181709e-06);
+}
+HNO-NNH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.77643371e-03  1.49604016e-03 -2.73036360e-04  2.30341238e-05
+ -7.11933034e-07);
+}
+HNO-NO {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.02081084e-03  1.57956007e-03 -2.80971517e-04  2.30608492e-05
+ -6.92335485e-07);
+}
+HNO-NO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.30632659e-03  1.06180305e-03 -1.57075386e-04  1.03924904e-05
+ -2.24406518e-07);
+}
+HNO-N2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.84810998e-03  7.97283502e-04 -1.03094119e-04  5.45140722e-06
+ -5.72732698e-08);
+}
+HNO-HNO {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.08241976e-03  1.57852852e-03 -2.74406645e-04  2.19932071e-05
+ -6.42266130e-07);
+}
+N2-H2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-7.32328055e-03  4.24748624e-03 -8.03359454e-04  7.09683777e-05
+ -2.28426907e-06);
+}
+N2-H {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-1.85527939e-02  9.45503819e-03 -1.63392423e-03  1.30160150e-04
+ -3.77297522e-06);
+}
+N2-O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.33407642e-03  2.34877511e-03 -4.30254714e-04  3.64533058e-05
+ -1.13132818e-06);
+}
+N2-O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.03005348e-03  1.59631195e-03 -2.85582712e-04  2.35890030e-05
+ -7.12813918e-07);
+}
+N2-OH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.25153942e-03  2.30404566e-03 -4.22061058e-04  3.57590987e-05
+ -1.10978347e-06);
+}
+N2-H2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 3.27886052e-03 -2.50547845e-03  6.67816571e-04 -7.08358849e-05
+  2.71349270e-06);
+}
+N2-HO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.00837738e-03  1.58489241e-03 -2.83539739e-04  2.34202543e-05
+ -7.07714660e-07);
+}
+N2-H2O2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.98784247e-03  1.57407407e-03 -2.81604322e-04  2.32603898e-05
+ -7.02883864e-07);
+}
+N2-N {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.72641821e-03  2.03991719e-03 -3.76144820e-04  3.21105246e-05
+ -1.00382935e-06);
+}
+N2-NH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.56574933e-03  2.47432610e-03 -4.53253470e-04  3.84018740e-05
+ -1.19180199e-06);
+}
+N2-NH2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-4.47127161e-03  2.42312559e-03 -4.43874428e-04  3.76072352e-05
+ -1.16714038e-06);
+}
+N2-NH3 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs ( 5.79873364e-04 -8.84976552e-04  3.11991132e-04 -3.69963833e-05
+  1.52412620e-06);
+}
+N2-NNH {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.62323831e-03  1.43601406e-03 -2.64789792e-04  2.26044297e-05
+ -7.06652729e-07);
+}
+N2-NO {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.90725236e-03  1.54617336e-03 -2.78951694e-04  2.32480560e-05
+ -7.09277974e-07);
+}
+N2-NO2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.66406435e-03  1.29726913e-03 -2.11744154e-04  1.58484780e-05
+ -4.23647217e-07);
+}
+N2-N2O {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.16012951e-03  1.00430038e-03 -1.51246449e-04  1.02555846e-05
+ -2.32418277e-07);
+}
+N2-HNO {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-3.07491386e-03  1.60785015e-03 -2.86003745e-04  2.34738713e-05
+ -7.04735282e-07);
+}
+N2-N2 {
+    type binaryDiffusionCoefficientsPolynomial;
+    polynomialCoeffs (-2.95673852e-03  1.57249174e-03 -2.83699906e-04  2.36437757e-05
+ -7.21351039e-07);
+}

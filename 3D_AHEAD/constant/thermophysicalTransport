@@ -1,0 +1,65 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version         2;
+    format          ascii;
+    class           dictionary;
+    location        "constant";
+    object          thermophysicalTransport;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+LES
+{
+
+   model	        constantLewisEddyDiffusivity; 
+    mixtureDiffusionCoefficients no;
+    Prt             0.85;
+    Sct             0.75;
+
+    writeDmi        no;
+    D
+    {
+        #include        "binaryDiffusionCoefficientsPolynomialDict"
+    }
+
+	VcOnFirstIter  true;
+	heatFluxModel Fourier;
+
+Le
+{
+
+
+
+N2       1.3874746597461713;
+H2       0.3517750817688228;
+H        0.23110887549572762;
+O2       1.3565003238559044;
+O        0.8556694433018137;
+H2O      1.0686877035589595;
+OH       0.8715034808159351;
+H2O2     1.3303279308428233;
+HO2      1.321618592049029;
+NO       1.3422946044766708;
+N2O      1.6906271892656797;
+N        0.9618292767152214;
+NH       0.8123193019557815;
+NNH      1.358063156964541;
+NH2      0.829016900894813;
+
+
+
+
+}
+}
+
+
+// ************************************************************************* //
+
+
