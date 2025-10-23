@@ -42,7 +42,7 @@ The numerical results extracted  using the sampleDict are compared against the e
 
 
 <a id="1">[1]</a>
-A. Haider, I. Morev, A. Rintanen, Z. Shahin, P. Tamadonfar, S. Karimkashi, A. Wehrfritz, V. Vuorinen, DLBFoam for open-source numerical simulations of hydrogen flames
+A. Haider, I. Morev, A. Rintanen, Z. Shahin, P. Tamadonfar, S. Karimkashi, A. Wehrfritz, V. Vuorinen, Accelerated numerical simulations of hydrogen flames: open-source implementation of an advanced diffusion model library in OpenFOAM
 
 <a id="2">[2]</a> 
 I. Morev, B. Tekgül, M. Gadalla, A. Shahanaghi, J. Kannan, S. Karimkashi, O. Kaario, V. Vuorinen, Fast reactive flow simulations using analytical Jacobian and dynamic load balancing in OpenFOAM, Physics of Fluids 34, 021801, [10.1063/5.0077437](https://doi.org/10.1063/5.0077437) (2022).
