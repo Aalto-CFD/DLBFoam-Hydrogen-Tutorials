@@ -9,13 +9,22 @@ This is a validation study of the AHEAD premixed burner carried out under stable
 
 ## Numerical setup
 
-
+<p align="center">
+  <img src="doc/mesh.png" alt="drawing" width="500"/>
+</p>
 ## Execution
 
 
 
 ## PostProcessing/Validation
 
+<p align="center">
+  <img src="doc/blue11.png" alt="drawing" width="500"/>
+</p>
+
+<p align="center">
+  <img src="doc/results.png" alt="drawing" width="500"/>
+</p>
 
 
 **Total speed-up compared to standard OpenFOAM solver was around ?.**
