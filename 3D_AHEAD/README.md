@@ -9,7 +9,10 @@ Air is introduced through the plenum, from where it is subdivided into three mai
 </p>
 
 ## Numerical setup
-The details of the numerical setup can be found in our publication Ref [[1]](#1)
+
+. The solver is reactingFoam, 
+
+The simulation setup incorporates a species-specific constant Lewis number transport model to account for the fast diffusion of light hydrogen atoms. Details regarding the calculation of species-specific Lewis numbers and the conditions used in the present simulations are provided in the Supplementary Data file Section of Ref [[1]](#1) . The turbulent Schmidt number  is set to 0.75, and the turbulent Prandtl number to 0.85. To analyze the implemented transport models, six simulations are performed in total: three non-reactive flows to assess mesh independence and three reactive flows. More details can be found in the manuscript or the present case setup files in Ref [[1]](#1).
 
 <p align="center">
   <img src="doc/mesh.png" alt="drawing" width="500"/>
