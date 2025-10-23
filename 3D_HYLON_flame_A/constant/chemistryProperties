@@ -1,0 +1,82 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      chemistryProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+chemistryType
+{
+    solver          ode_pyJac;
+    method          loadBalanced_pyJac;
+}
+
+loadbalancing
+{
+    active true;
+    log	false;
+}
+
+refmapping
+{
+    active  true;
+
+    mixtureFractionProperties
+    {
+
+        oxidizerMassFractions // air coflow (humid air)
+        {
+            N2 0.77;
+            O2 0.23;
+            // H2O 0; // assume infinitesimal compared to N2 and O2
+        }
+
+        fuelMassFractions // main jet
+        {
+            H2  1;
+            // CH4 0.1561;
+            // N2 0.6473;
+            // O2 0.1966;
+        }
+
+    #include "/scratch/project_2004667/shahinzi/DLBmech/Capurso/foam/thermo.foam"
+
+
+
+    }
+
+    tolerance 1e-4;
+    deltaT 1;
+}
+
+
+chemistry       on;
+
+initialChemicalTimeStep 1;
+
+
+
+
+odeCoeffs
+{
+    solver          seulex_LAPACK;
+    absTol          1e-08;
+    relTol          1e-05;
+}
+
+//#include "H2_r_cp"
+
+#include "/scratch/project_2004667/shahinzi/DLBmech/Capurso/foam/reactions.foam"
+
+
+// ************************************************************************* //

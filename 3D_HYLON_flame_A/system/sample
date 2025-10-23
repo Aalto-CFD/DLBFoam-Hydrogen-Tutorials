@@ -1,0 +1,3241 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      sample;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+type sets;
+libs            ("libsampling.so");
+
+interpolationScheme cellPoint;
+
+setFormat       csv;
+
+sets
+(
+
+data2mm0
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0000000000 -0.0225166604 0.037129);
+    end     (0.0000000000 0.0225166604 0.037129);
+    nPoints 1000;
+}
+data2mm1
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0014138339 -0.0224722288 0.037129);
+    end     (-0.0014138339 0.0224722288 0.037129);
+    nPoints 1000;
+}
+data2mm2
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0028220924 -0.0223391090 0.037129);
+    end     (-0.0028220924 0.0223391090 0.037129);
+    nPoints 1000;
+}
+data2mm3
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0042192112 -0.0221178266 0.037129);
+    end     (-0.0042192112 0.0221178266 0.037129);
+    nPoints 1000;
+}
+data2mm4
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0055996786 -0.0218092548 0.037129);
+    end     (-0.0055996786 0.0218092548 0.037129);
+    nPoints 1000;
+}
+data2mm5
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0069580250 -0.0214146184 0.037129);
+    end     (-0.0069580250 0.0214146184 0.037129);
+    nPoints 1000;
+}
+data2mm6
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0082889331 -0.0209354624 0.037129);
+    end     (-0.0082889331 0.0209354624 0.037129);
+    nPoints 1000;
+}
+data2mm7
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0095871283 -0.0203736832 0.037129);
+    end     (-0.0095871283 0.0203736832 0.037129);
+    nPoints 1000;
+}
+data2mm8
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0108474873 -0.0197314980 0.037129);
+    end     (-0.0108474873 0.0197314980 0.037129);
+    nPoints 1000;
+}
+data2mm9
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0120650361 -0.0190114413 0.037129);
+    end     (-0.0120650361 0.0190114413 0.037129);
+    nPoints 1000;
+}
+data2mm10
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0132349695 -0.0182163547 0.037129);
+    end     (-0.0132349695 0.0182163547 0.037129);
+    nPoints 1000;
+}
+data2mm11
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0143526702 -0.0173493762 0.037129);
+    end     (-0.0143526702 0.0173493762 0.037129);
+    nPoints 1000;
+}
+data2mm12
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0154137272 -0.0164139273 0.037129);
+    end     (-0.0154137272 0.0164139273 0.037129);
+    nPoints 1000;
+}
+data2mm13
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0164139531 -0.0154136998 0.037129);
+    end     (-0.0164139531 0.0154136998 0.037129);
+    nPoints 1000;
+}
+data2mm14
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0173494002 -0.0143526412 0.037129);
+    end     (-0.0173494002 0.0143526412 0.037129);
+    nPoints 1000;
+}
+data2mm15
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0182163636 -0.0132349572 0.037129);
+    end     (-0.0182163636 0.0132349572 0.037129);
+    nPoints 1000;
+}
+data2mm16
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0190114494 -0.0120650233 0.037129);
+    end     (-0.0190114494 0.0120650233 0.037129);
+    nPoints 1000;
+}
+data2mm17
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0197314836 -0.0108475135 0.037129);
+    end     (-0.0197314836 0.0108475135 0.037129);
+    nPoints 1000;
+}
+data2mm18
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0203736513 -0.0095871961 0.037129);
+    end     (-0.0203736513 0.0095871961 0.037129);
+    nPoints 1000;
+}
+data2mm19
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0209355011 -0.0082888352 0.037129);
+    end     (-0.0209355011 0.0082888352 0.037129);
+    nPoints 1000;
+}
+data2mm20
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0214146370 -0.0069579678 0.037129);
+    end     (-0.0214146370 0.0069579678 0.037129);
+    nPoints 1000;
+}
+data2mm21
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0218092642 -0.0055996421 0.037129);
+    end     (-0.0218092642 0.0055996421 0.037129);
+    nPoints 1000;
+}
+data2mm22
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0221178252 -0.0042192184 0.037129);
+    end     (-0.0221178252 0.0042192184 0.037129);
+    nPoints 1000;
+}
+data2mm23
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0223391024 -0.0028221444 0.037129);
+    end     (-0.0223391024 0.0028221444 0.037129);
+    nPoints 1000;
+}
+data2mm24
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0224722367 -0.0014137086 0.037129);
+    end     (-0.0224722367 0.0014137086 0.037129);
+    nPoints 1000;
+}
+data2mm25
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0225166604 0.0000000827 0.037129);
+    end     (-0.0225166604 -0.0000000827 0.037129);
+    nPoints 1000;
+}
+data2mm26
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0224722263 0.0014138737 0.037129);
+    end     (-0.0224722263 -0.0014138737 0.037129);
+    nPoints 1000;
+}
+data2mm27
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0223391099 0.0028220851 0.037129);
+    end     (-0.0223391099 -0.0028220851 0.037129);
+    nPoints 1000;
+}
+data2mm28
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0221178364 0.0042191597 0.037129);
+    end     (-0.0221178364 -0.0042191597 0.037129);
+    nPoints 1000;
+}
+data2mm29
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0218092230 0.0055998023 0.037129);
+    end     (-0.0218092230 -0.0055998023 0.037129);
+    nPoints 1000;
+}
+data2mm30
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0214145859 0.0069581251 0.037129);
+    end     (-0.0214145859 -0.0069581251 0.037129);
+    nPoints 1000;
+}
+data2mm31
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0209354402 0.0082889890 0.037129);
+    end     (-0.0209354402 -0.0082889890 0.037129);
+    nPoints 1000;
+}
+data2mm32
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0203736767 0.0095871420 0.037129);
+    end     (-0.0203736767 -0.0095871420 0.037129);
+    nPoints 1000;
+}
+data2mm33
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0197315124 0.0108474612 0.037129);
+    end     (-0.0197315124 -0.0108474612 0.037129);
+    nPoints 1000;
+}
+data2mm34
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0190114814 0.0120649729 0.037129);
+    end     (-0.0190114814 -0.0120649729 0.037129);
+    nPoints 1000;
+}
+data2mm35
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0182162929 0.0132350546 0.037129);
+    end     (-0.0182162929 -0.0132350546 0.037129);
+    nPoints 1000;
+}
+data2mm36
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0173493378 0.0143527166 0.037129);
+    end     (-0.0173493378 -0.0143527166 0.037129);
+    nPoints 1000;
+}
+data2mm37
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0164139169 0.0154137383 0.037129);
+    end     (-0.0164139169 -0.0154137383 0.037129);
+    nPoints 1000;
+}
+data2mm38
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0154137216 0.0164139326 0.037129);
+    end     (-0.0154137216 -0.0164139326 0.037129);
+    nPoints 1000;
+}
+data2mm39
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0143526989 0.0173493524 0.037129);
+    end     (-0.0143526989 -0.0173493524 0.037129);
+    nPoints 1000;
+}
+data2mm40
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0132348539 0.0182164387 0.037129);
+    end     (-0.0132348539 -0.0182164387 0.037129);
+    nPoints 1000;
+}
+data2mm41
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0120649535 0.0190114937 0.037129);
+    end     (-0.0120649535 -0.0190114937 0.037129);
+    nPoints 1000;
+}
+data2mm42
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0108474410 0.0197315235 0.037129);
+    end     (-0.0108474410 -0.0197315235 0.037129);
+    nPoints 1000;
+}
+data2mm43
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0095871212 0.0203736865 0.037129);
+    end     (-0.0095871212 -0.0203736865 0.037129);
+    nPoints 1000;
+}
+data2mm44
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0082889677 0.0209354487 0.037129);
+    end     (-0.0082889677 -0.0209354487 0.037129);
+    nPoints 1000;
+}
+data2mm45
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0069578891 0.0214146626 0.037129);
+    end     (-0.0069578891 -0.0214146626 0.037129);
+    nPoints 1000;
+}
+data2mm46
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0055995620 0.0218092848 0.037129);
+    end     (-0.0055995620 -0.0218092848 0.037129);
+    nPoints 1000;
+}
+data2mm47
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0042191372 0.0221178407 0.037129);
+    end     (-0.0042191372 -0.0221178407 0.037129);
+    nPoints 1000;
+}
+data2mm48
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0028220623 0.0223391128 0.037129);
+    end     (-0.0028220623 -0.0223391128 0.037129);
+    nPoints 1000;
+}
+data2mm49
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0014138508 0.0224722278 0.037129);
+    end     (-0.0014138508 -0.0224722278 0.037129);
+    nPoints 1000;
+}
+data2mm50
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0000000597 0.0225166604 0.037129);
+    end     (-0.0000000597 -0.0225166604 0.037129);
+    nPoints 1000;
+}
+data2mm51
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0014139563 0.0224722211 0.037129);
+    end     (0.0014139563 -0.0224722211 0.037129);
+    nPoints 1000;
+}
+data2mm52
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0028221672 0.0223390995 0.037129);
+    end     (0.0028221672 -0.0223390995 0.037129);
+    nPoints 1000;
+}
+data2mm53
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0042192410 0.0221178209 0.037129);
+    end     (0.0042192410 -0.0221178209 0.037129);
+    nPoints 1000;
+}
+data2mm54
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0055996643 0.0218092585 0.037129);
+    end     (0.0055996643 -0.0218092585 0.037129);
+    nPoints 1000;
+}
+data2mm55
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0069579896 0.0214146300 0.037129);
+    end     (0.0069579896 -0.0214146300 0.037129);
+    nPoints 1000;
+}
+data2mm56
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0082890659 0.0209354098 0.037129);
+    end     (0.0082890659 -0.0209354098 0.037129);
+    nPoints 1000;
+}
+data2mm57
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0095872168 0.0203736415 0.037129);
+    end     (0.0095872168 -0.0203736415 0.037129);
+    nPoints 1000;
+}
+data2mm58
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0108475336 0.0197314726 0.037129);
+    end     (0.0108475336 -0.0197314726 0.037129);
+    nPoints 1000;
+}
+data2mm59
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0120650427 0.0190114371 0.037129);
+    end     (0.0120650427 -0.0190114371 0.037129);
+    nPoints 1000;
+}
+data2mm60
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0132349393 0.0182163766 0.037129);
+    end     (0.0132349393 -0.0182163766 0.037129);
+    nPoints 1000;
+}
+data2mm61
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0143527803 0.0173492851 0.037129);
+    end     (0.0143527803 -0.0173492851 0.037129);
+    nPoints 1000;
+}
+data2mm62
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0154137986 0.0164138603 0.037129);
+    end     (0.0154137986 -0.0164138603 0.037129);
+    nPoints 1000;
+}
+data2mm63
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0164139892 0.0154136613 0.037129);
+    end     (0.0164139892 -0.0154136613 0.037129);
+    nPoints 1000;
+}
+data2mm64
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0173494052 0.0143526352 0.037129);
+    end     (0.0173494052 -0.0143526352 0.037129);
+    nPoints 1000;
+}
+data2mm65
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0182163550 0.0132349691 0.037129);
+    end     (0.0182163550 -0.0132349691 0.037129);
+    nPoints 1000;
+}
+data2mm66
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0190115380 0.0120648836 0.037129);
+    end     (0.0190115380 -0.0120648836 0.037129);
+    nPoints 1000;
+}
+data2mm67
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0197315633 0.0108473686 0.037129);
+    end     (0.0197315633 -0.0108473686 0.037129);
+    nPoints 1000;
+}
+data2mm68
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0203737217 0.0095870464 0.037129);
+    end     (0.0203737217 -0.0095870464 0.037129);
+    nPoints 1000;
+}
+data2mm69
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0209354791 0.0082888908 0.037129);
+    end     (0.0209354791 -0.0082888908 0.037129);
+    nPoints 1000;
+}
+data2mm70
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0214146186 0.0069580246 0.037129);
+    end     (0.0214146186 -0.0069580246 0.037129);
+    nPoints 1000;
+}
+data2mm71
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0218092493 0.0055996999 0.037129);
+    end     (0.0218092493 -0.0055996999 0.037129);
+    nPoints 1000;
+}
+data2mm72
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0221178562 0.0042190559 0.037129);
+    end     (0.0221178562 -0.0042190559 0.037129);
+    nPoints 1000;
+}
+data2mm73
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0223391231 0.0028219803 0.037129);
+    end     (0.0223391231 -0.0028219803 0.037129);
+    nPoints 1000;
+}
+data2mm74
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0224722330 0.0014137682 0.037129);
+    end     (0.0224722330 -0.0014137682 0.037129);
+    nPoints 1000;
+}
+data2mm75
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0225166604 -0.0000000230 0.037129);
+    end     (0.0225166604 0.0000000230 0.037129);
+    nPoints 1000;
+}
+data2mm76
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0224722301 -0.0014138141 0.037129);
+    end     (0.0224722301 0.0014138141 0.037129);
+    nPoints 1000;
+}
+data2mm77
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0223390892 -0.0028222492 0.037129);
+    end     (0.0223390892 0.0028222492 0.037129);
+    nPoints 1000;
+}
+data2mm78
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0221178054 -0.0042193222 0.037129);
+    end     (0.0221178054 0.0042193222 0.037129);
+    nPoints 1000;
+}
+data2mm79
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0218092379 -0.0055997444 0.037129);
+    end     (0.0218092379 0.0055997444 0.037129);
+    nPoints 1000;
+}
+data2mm80
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0214146044 -0.0069580683 0.037129);
+    end     (0.0214146044 0.0069580683 0.037129);
+    nPoints 1000;
+}
+data2mm81
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0209354622 -0.0082889335 0.037129);
+    end     (0.0209354622 0.0082889335 0.037129);
+    nPoints 1000;
+}
+data2mm82
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0203736063 -0.0095872917 0.037129);
+    end     (0.0203736063 0.0095872917 0.037129);
+    nPoints 1000;
+}
+data2mm83
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0197314327 -0.0108476061 0.037129);
+    end     (0.0197314327 0.0108476061 0.037129);
+    nPoints 1000;
+}
+data2mm84
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0190113928 -0.0120651125 0.037129);
+    end     (0.0190113928 0.0120651125 0.037129);
+    nPoints 1000;
+}
+data2mm85
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0182163280 -0.0132350063 0.037129);
+    end     (0.0182163280 0.0132350063 0.037129);
+    nPoints 1000;
+}
+data2mm86
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0173493759 -0.0143526705 0.037129);
+    end     (0.0173493759 0.0143526705 0.037129);
+    nPoints 1000;
+}
+data2mm87
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0164138037 -0.0154138589 0.037129);
+    end     (0.0164138037 0.0154138589 0.037129);
+    nPoints 1000;
+}
+data2mm88
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0154136010 -0.0164140458 0.037129);
+    end     (0.0154136010 0.0164140458 0.037129);
+    nPoints 1000;
+}
+data2mm89
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0143525714 -0.0173494579 0.037129);
+    end     (0.0143525714 0.0173494579 0.037129);
+    nPoints 1000;
+}
+data2mm90
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0132349022 -0.0182164036 0.037129);
+    end     (0.0132349022 0.0182164036 0.037129);
+    nPoints 1000;
+}
+data2mm91
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0120650039 -0.0190114617 0.037129);
+    end     (0.0120650039 0.0190114617 0.037129);
+    nPoints 1000;
+}
+data2mm92
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0108474934 -0.0197314947 0.037129);
+    end     (0.0108474934 0.0197314947 0.037129);
+    nPoints 1000;
+}
+data2mm93
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0095869716 -0.0203737569 0.037129);
+    end     (0.0095869716 0.0203737569 0.037129);
+    nPoints 1000;
+}
+data2mm94
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0082888139 -0.0209355095 0.037129);
+    end     (0.0082888139 0.0209355095 0.037129);
+    nPoints 1000;
+}
+data2mm95
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0069579460 -0.0214146441 0.037129);
+    end     (0.0069579460 0.0214146441 0.037129);
+    nPoints 1000;
+}
+data2mm96
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0055996198 -0.0218092699 0.037129);
+    end     (0.0055996198 0.0218092699 0.037129);
+    nPoints 1000;
+}
+data2mm97
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0042191959 -0.0221178295 0.037129);
+    end     (0.0042191959 0.0221178295 0.037129);
+    nPoints 1000;
+}
+data2mm98
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0028218982 -0.0223391335 0.037129);
+    end     (0.0028218982 0.0223391335 0.037129);
+    nPoints 1000;
+}
+data2mm99
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0014136857 -0.0224722382 0.037129);
+    end     (0.0014136857 0.0224722382 0.037129);
+    nPoints 1000;
+}
+
+
+data5mm0
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0000000000 -0.0225166604 0.039796);
+    end     (0.0000000000 0.0225166604 0.039796);
+    nPoints 1000;
+}
+data5mm1
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0014138339 -0.0224722288 0.039796);
+    end     (-0.0014138339 0.0224722288 0.039796);
+    nPoints 1000;
+}
+data5mm2
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0028220924 -0.0223391090 0.039796);
+    end     (-0.0028220924 0.0223391090 0.039796);
+    nPoints 1000;
+}
+data5mm3
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0042192112 -0.0221178266 0.039796);
+    end     (-0.0042192112 0.0221178266 0.039796);
+    nPoints 1000;
+}
+data5mm4
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0055996786 -0.0218092548 0.039796);
+    end     (-0.0055996786 0.0218092548 0.039796);
+    nPoints 1000;
+}
+data5mm5
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0069580250 -0.0214146184 0.039796);
+    end     (-0.0069580250 0.0214146184 0.039796);
+    nPoints 1000;
+}
+data5mm6
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0082889331 -0.0209354624 0.039796);
+    end     (-0.0082889331 0.0209354624 0.039796);
+    nPoints 1000;
+}
+data5mm7
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0095871283 -0.0203736832 0.039796);
+    end     (-0.0095871283 0.0203736832 0.039796);
+    nPoints 1000;
+}
+data5mm8
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0108474873 -0.0197314980 0.039796);
+    end     (-0.0108474873 0.0197314980 0.039796);
+    nPoints 1000;
+}
+data5mm9
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0120650361 -0.0190114413 0.039796);
+    end     (-0.0120650361 0.0190114413 0.039796);
+    nPoints 1000;
+}
+data5mm10
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0132349695 -0.0182163547 0.039796);
+    end     (-0.0132349695 0.0182163547 0.039796);
+    nPoints 1000;
+}
+data5mm11
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0143526702 -0.0173493762 0.039796);
+    end     (-0.0143526702 0.0173493762 0.039796);
+    nPoints 1000;
+}
+data5mm12
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0154137272 -0.0164139273 0.039796);
+    end     (-0.0154137272 0.0164139273 0.039796);
+    nPoints 1000;
+}
+data5mm13
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0164139531 -0.0154136998 0.039796);
+    end     (-0.0164139531 0.0154136998 0.039796);
+    nPoints 1000;
+}
+data5mm14
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0173494002 -0.0143526412 0.039796);
+    end     (-0.0173494002 0.0143526412 0.039796);
+    nPoints 1000;
+}
+data5mm15
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0182163636 -0.0132349572 0.039796);
+    end     (-0.0182163636 0.0132349572 0.039796);
+    nPoints 1000;
+}
+data5mm16
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0190114494 -0.0120650233 0.039796);
+    end     (-0.0190114494 0.0120650233 0.039796);
+    nPoints 1000;
+}
+data5mm17
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0197314836 -0.0108475135 0.039796);
+    end     (-0.0197314836 0.0108475135 0.039796);
+    nPoints 1000;
+}
+data5mm18
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0203736513 -0.0095871961 0.039796);
+    end     (-0.0203736513 0.0095871961 0.039796);
+    nPoints 1000;
+}
+data5mm19
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0209355011 -0.0082888352 0.039796);
+    end     (-0.0209355011 0.0082888352 0.039796);
+    nPoints 1000;
+}
+data5mm20
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0214146370 -0.0069579678 0.039796);
+    end     (-0.0214146370 0.0069579678 0.039796);
+    nPoints 1000;
+}
+data5mm21
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0218092642 -0.0055996421 0.039796);
+    end     (-0.0218092642 0.0055996421 0.039796);
+    nPoints 1000;
+}
+data5mm22
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0221178252 -0.0042192184 0.039796);
+    end     (-0.0221178252 0.0042192184 0.039796);
+    nPoints 1000;
+}
+data5mm23
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0223391024 -0.0028221444 0.039796);
+    end     (-0.0223391024 0.0028221444 0.039796);
+    nPoints 1000;
+}
+data5mm24
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0224722367 -0.0014137086 0.039796);
+    end     (-0.0224722367 0.0014137086 0.039796);
+    nPoints 1000;
+}
+data5mm25
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0225166604 0.0000000827 0.039796);
+    end     (-0.0225166604 -0.0000000827 0.039796);
+    nPoints 1000;
+}
+data5mm26
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0224722263 0.0014138737 0.039796);
+    end     (-0.0224722263 -0.0014138737 0.039796);
+    nPoints 1000;
+}
+data5mm27
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0223391099 0.0028220851 0.039796);
+    end     (-0.0223391099 -0.0028220851 0.039796);
+    nPoints 1000;
+}
+data5mm28
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0221178364 0.0042191597 0.039796);
+    end     (-0.0221178364 -0.0042191597 0.039796);
+    nPoints 1000;
+}
+data5mm29
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0218092230 0.0055998023 0.039796);
+    end     (-0.0218092230 -0.0055998023 0.039796);
+    nPoints 1000;
+}
+data5mm30
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0214145859 0.0069581251 0.039796);
+    end     (-0.0214145859 -0.0069581251 0.039796);
+    nPoints 1000;
+}
+data5mm31
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0209354402 0.0082889890 0.039796);
+    end     (-0.0209354402 -0.0082889890 0.039796);
+    nPoints 1000;
+}
+data5mm32
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0203736767 0.0095871420 0.039796);
+    end     (-0.0203736767 -0.0095871420 0.039796);
+    nPoints 1000;
+}
+data5mm33
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0197315124 0.0108474612 0.039796);
+    end     (-0.0197315124 -0.0108474612 0.039796);
+    nPoints 1000;
+}
+data5mm34
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0190114814 0.0120649729 0.039796);
+    end     (-0.0190114814 -0.0120649729 0.039796);
+    nPoints 1000;
+}
+data5mm35
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0182162929 0.0132350546 0.039796);
+    end     (-0.0182162929 -0.0132350546 0.039796);
+    nPoints 1000;
+}
+data5mm36
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0173493378 0.0143527166 0.039796);
+    end     (-0.0173493378 -0.0143527166 0.039796);
+    nPoints 1000;
+}
+data5mm37
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0164139169 0.0154137383 0.039796);
+    end     (-0.0164139169 -0.0154137383 0.039796);
+    nPoints 1000;
+}
+data5mm38
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0154137216 0.0164139326 0.039796);
+    end     (-0.0154137216 -0.0164139326 0.039796);
+    nPoints 1000;
+}
+data5mm39
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0143526989 0.0173493524 0.039796);
+    end     (-0.0143526989 -0.0173493524 0.039796);
+    nPoints 1000;
+}
+data5mm40
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0132348539 0.0182164387 0.039796);
+    end     (-0.0132348539 -0.0182164387 0.039796);
+    nPoints 1000;
+}
+data5mm41
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0120649535 0.0190114937 0.039796);
+    end     (-0.0120649535 -0.0190114937 0.039796);
+    nPoints 1000;
+}
+data5mm42
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0108474410 0.0197315235 0.039796);
+    end     (-0.0108474410 -0.0197315235 0.039796);
+    nPoints 1000;
+}
+data5mm43
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0095871212 0.0203736865 0.039796);
+    end     (-0.0095871212 -0.0203736865 0.039796);
+    nPoints 1000;
+}
+data5mm44
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0082889677 0.0209354487 0.039796);
+    end     (-0.0082889677 -0.0209354487 0.039796);
+    nPoints 1000;
+}
+data5mm45
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0069578891 0.0214146626 0.039796);
+    end     (-0.0069578891 -0.0214146626 0.039796);
+    nPoints 1000;
+}
+data5mm46
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0055995620 0.0218092848 0.039796);
+    end     (-0.0055995620 -0.0218092848 0.039796);
+    nPoints 1000;
+}
+data5mm47
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0042191372 0.0221178407 0.039796);
+    end     (-0.0042191372 -0.0221178407 0.039796);
+    nPoints 1000;
+}
+data5mm48
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0028220623 0.0223391128 0.039796);
+    end     (-0.0028220623 -0.0223391128 0.039796);
+    nPoints 1000;
+}
+data5mm49
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0014138508 0.0224722278 0.039796);
+    end     (-0.0014138508 -0.0224722278 0.039796);
+    nPoints 1000;
+}
+data5mm50
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0000000597 0.0225166604 0.039796);
+    end     (-0.0000000597 -0.0225166604 0.039796);
+    nPoints 1000;
+}
+data5mm51
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0014139563 0.0224722211 0.039796);
+    end     (0.0014139563 -0.0224722211 0.039796);
+    nPoints 1000;
+}
+data5mm52
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0028221672 0.0223390995 0.039796);
+    end     (0.0028221672 -0.0223390995 0.039796);
+    nPoints 1000;
+}
+data5mm53
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0042192410 0.0221178209 0.039796);
+    end     (0.0042192410 -0.0221178209 0.039796);
+    nPoints 1000;
+}
+data5mm54
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0055996643 0.0218092585 0.039796);
+    end     (0.0055996643 -0.0218092585 0.039796);
+    nPoints 1000;
+}
+data5mm55
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0069579896 0.0214146300 0.039796);
+    end     (0.0069579896 -0.0214146300 0.039796);
+    nPoints 1000;
+}
+data5mm56
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0082890659 0.0209354098 0.039796);
+    end     (0.0082890659 -0.0209354098 0.039796);
+    nPoints 1000;
+}
+data5mm57
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0095872168 0.0203736415 0.039796);
+    end     (0.0095872168 -0.0203736415 0.039796);
+    nPoints 1000;
+}
+data5mm58
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0108475336 0.0197314726 0.039796);
+    end     (0.0108475336 -0.0197314726 0.039796);
+    nPoints 1000;
+}
+data5mm59
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0120650427 0.0190114371 0.039796);
+    end     (0.0120650427 -0.0190114371 0.039796);
+    nPoints 1000;
+}
+data5mm60
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0132349393 0.0182163766 0.039796);
+    end     (0.0132349393 -0.0182163766 0.039796);
+    nPoints 1000;
+}
+data5mm61
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0143527803 0.0173492851 0.039796);
+    end     (0.0143527803 -0.0173492851 0.039796);
+    nPoints 1000;
+}
+data5mm62
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0154137986 0.0164138603 0.039796);
+    end     (0.0154137986 -0.0164138603 0.039796);
+    nPoints 1000;
+}
+data5mm63
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0164139892 0.0154136613 0.039796);
+    end     (0.0164139892 -0.0154136613 0.039796);
+    nPoints 1000;
+}
+data5mm64
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0173494052 0.0143526352 0.039796);
+    end     (0.0173494052 -0.0143526352 0.039796);
+    nPoints 1000;
+}
+data5mm65
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0182163550 0.0132349691 0.039796);
+    end     (0.0182163550 -0.0132349691 0.039796);
+    nPoints 1000;
+}
+data5mm66
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0190115380 0.0120648836 0.039796);
+    end     (0.0190115380 -0.0120648836 0.039796);
+    nPoints 1000;
+}
+data5mm67
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0197315633 0.0108473686 0.039796);
+    end     (0.0197315633 -0.0108473686 0.039796);
+    nPoints 1000;
+}
+data5mm68
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0203737217 0.0095870464 0.039796);
+    end     (0.0203737217 -0.0095870464 0.039796);
+    nPoints 1000;
+}
+data5mm69
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0209354791 0.0082888908 0.039796);
+    end     (0.0209354791 -0.0082888908 0.039796);
+    nPoints 1000;
+}
+data5mm70
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0214146186 0.0069580246 0.039796);
+    end     (0.0214146186 -0.0069580246 0.039796);
+    nPoints 1000;
+}
+data5mm71
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0218092493 0.0055996999 0.039796);
+    end     (0.0218092493 -0.0055996999 0.039796);
+    nPoints 1000;
+}
+data5mm72
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0221178562 0.0042190559 0.039796);
+    end     (0.0221178562 -0.0042190559 0.039796);
+    nPoints 1000;
+}
+data5mm73
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0223391231 0.0028219803 0.039796);
+    end     (0.0223391231 -0.0028219803 0.039796);
+    nPoints 1000;
+}
+data5mm74
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0224722330 0.0014137682 0.039796);
+    end     (0.0224722330 -0.0014137682 0.039796);
+    nPoints 1000;
+}
+data5mm75
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0225166604 -0.0000000230 0.039796);
+    end     (0.0225166604 0.0000000230 0.039796);
+    nPoints 1000;
+}
+data5mm76
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0224722301 -0.0014138141 0.039796);
+    end     (0.0224722301 0.0014138141 0.039796);
+    nPoints 1000;
+}
+data5mm77
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0223390892 -0.0028222492 0.039796);
+    end     (0.0223390892 0.0028222492 0.039796);
+    nPoints 1000;
+}
+data5mm78
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0221178054 -0.0042193222 0.039796);
+    end     (0.0221178054 0.0042193222 0.039796);
+    nPoints 1000;
+}
+data5mm79
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0218092379 -0.0055997444 0.039796);
+    end     (0.0218092379 0.0055997444 0.039796);
+    nPoints 1000;
+}
+data5mm80
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0214146044 -0.0069580683 0.039796);
+    end     (0.0214146044 0.0069580683 0.039796);
+    nPoints 1000;
+}
+data5mm81
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0209354622 -0.0082889335 0.039796);
+    end     (0.0209354622 0.0082889335 0.039796);
+    nPoints 1000;
+}
+data5mm82
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0203736063 -0.0095872917 0.039796);
+    end     (0.0203736063 0.0095872917 0.039796);
+    nPoints 1000;
+}
+data5mm83
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0197314327 -0.0108476061 0.039796);
+    end     (0.0197314327 0.0108476061 0.039796);
+    nPoints 1000;
+}
+data5mm84
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0190113928 -0.0120651125 0.039796);
+    end     (0.0190113928 0.0120651125 0.039796);
+    nPoints 1000;
+}
+data5mm85
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0182163280 -0.0132350063 0.039796);
+    end     (0.0182163280 0.0132350063 0.039796);
+    nPoints 1000;
+}
+data5mm86
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0173493759 -0.0143526705 0.039796);
+    end     (0.0173493759 0.0143526705 0.039796);
+    nPoints 1000;
+}
+data5mm87
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0164138037 -0.0154138589 0.039796);
+    end     (0.0164138037 0.0154138589 0.039796);
+    nPoints 1000;
+}
+data5mm88
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0154136010 -0.0164140458 0.039796);
+    end     (0.0154136010 0.0164140458 0.039796);
+    nPoints 1000;
+}
+data5mm89
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0143525714 -0.0173494579 0.039796);
+    end     (0.0143525714 0.0173494579 0.039796);
+    nPoints 1000;
+}
+data5mm90
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0132349022 -0.0182164036 0.039796);
+    end     (0.0132349022 0.0182164036 0.039796);
+    nPoints 1000;
+}
+data5mm91
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0120650039 -0.0190114617 0.039796);
+    end     (0.0120650039 0.0190114617 0.039796);
+    nPoints 1000;
+}
+data5mm92
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0108474934 -0.0197314947 0.039796);
+    end     (0.0108474934 0.0197314947 0.039796);
+    nPoints 1000;
+}
+data5mm93
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0095869716 -0.0203737569 0.039796);
+    end     (0.0095869716 0.0203737569 0.039796);
+    nPoints 1000;
+}
+data5mm94
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0082888139 -0.0209355095 0.039796);
+    end     (0.0082888139 0.0209355095 0.039796);
+    nPoints 1000;
+}
+data5mm95
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0069579460 -0.0214146441 0.039796);
+    end     (0.0069579460 0.0214146441 0.039796);
+    nPoints 1000;
+}
+data5mm96
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0055996198 -0.0218092699 0.039796);
+    end     (0.0055996198 0.0218092699 0.039796);
+    nPoints 1000;
+}
+data5mm97
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0042191959 -0.0221178295 0.039796);
+    end     (0.0042191959 0.0221178295 0.039796);
+    nPoints 1000;
+}
+data5mm98
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0028218982 -0.0223391335 0.039796);
+    end     (0.0028218982 0.0223391335 0.039796);
+    nPoints 1000;
+}
+data5mm99
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0014136857 -0.0224722382 0.039796);
+    end     (0.0014136857 0.0224722382 0.039796);
+    nPoints 1000;
+}
+
+
+data10mm0
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0000000000 -0.0225166604 0.045036);
+    end     (0.0000000000 0.0225166604 0.045036);
+    nPoints 1000;
+}
+data10mm1
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0014138339 -0.0224722288 0.045036);
+    end     (-0.0014138339 0.0224722288 0.045036);
+    nPoints 1000;
+}
+data10mm2
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0028220924 -0.0223391090 0.045036);
+    end     (-0.0028220924 0.0223391090 0.045036);
+    nPoints 1000;
+}
+data10mm3
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0042192112 -0.0221178266 0.045036);
+    end     (-0.0042192112 0.0221178266 0.045036);
+    nPoints 1000;
+}
+data10mm4
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0055996786 -0.0218092548 0.045036);
+    end     (-0.0055996786 0.0218092548 0.045036);
+    nPoints 1000;
+}
+data10mm5
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0069580250 -0.0214146184 0.045036);
+    end     (-0.0069580250 0.0214146184 0.045036);
+    nPoints 1000;
+}
+data10mm6
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0082889331 -0.0209354624 0.045036);
+    end     (-0.0082889331 0.0209354624 0.045036);
+    nPoints 1000;
+}
+data10mm7
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0095871283 -0.0203736832 0.045036);
+    end     (-0.0095871283 0.0203736832 0.045036);
+    nPoints 1000;
+}
+data10mm8
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0108474873 -0.0197314980 0.045036);
+    end     (-0.0108474873 0.0197314980 0.045036);
+    nPoints 1000;
+}
+data10mm9
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0120650361 -0.0190114413 0.045036);
+    end     (-0.0120650361 0.0190114413 0.045036);
+    nPoints 1000;
+}
+data10mm10
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0132349695 -0.0182163547 0.045036);
+    end     (-0.0132349695 0.0182163547 0.045036);
+    nPoints 1000;
+}
+data10mm11
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0143526702 -0.0173493762 0.045036);
+    end     (-0.0143526702 0.0173493762 0.045036);
+    nPoints 1000;
+}
+data10mm12
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0154137272 -0.0164139273 0.045036);
+    end     (-0.0154137272 0.0164139273 0.045036);
+    nPoints 1000;
+}
+data10mm13
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0164139531 -0.0154136998 0.045036);
+    end     (-0.0164139531 0.0154136998 0.045036);
+    nPoints 1000;
+}
+data10mm14
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0173494002 -0.0143526412 0.045036);
+    end     (-0.0173494002 0.0143526412 0.045036);
+    nPoints 1000;
+}
+data10mm15
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0182163636 -0.0132349572 0.045036);
+    end     (-0.0182163636 0.0132349572 0.045036);
+    nPoints 1000;
+}
+data10mm16
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0190114494 -0.0120650233 0.045036);
+    end     (-0.0190114494 0.0120650233 0.045036);
+    nPoints 1000;
+}
+data10mm17
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0197314836 -0.0108475135 0.045036);
+    end     (-0.0197314836 0.0108475135 0.045036);
+    nPoints 1000;
+}
+data10mm18
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0203736513 -0.0095871961 0.045036);
+    end     (-0.0203736513 0.0095871961 0.045036);
+    nPoints 1000;
+}
+data10mm19
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0209355011 -0.0082888352 0.045036);
+    end     (-0.0209355011 0.0082888352 0.045036);
+    nPoints 1000;
+}
+data10mm20
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0214146370 -0.0069579678 0.045036);
+    end     (-0.0214146370 0.0069579678 0.045036);
+    nPoints 1000;
+}
+data10mm21
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0218092642 -0.0055996421 0.045036);
+    end     (-0.0218092642 0.0055996421 0.045036);
+    nPoints 1000;
+}
+data10mm22
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0221178252 -0.0042192184 0.045036);
+    end     (-0.0221178252 0.0042192184 0.045036);
+    nPoints 1000;
+}
+data10mm23
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0223391024 -0.0028221444 0.045036);
+    end     (-0.0223391024 0.0028221444 0.045036);
+    nPoints 1000;
+}
+data10mm24
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0224722367 -0.0014137086 0.045036);
+    end     (-0.0224722367 0.0014137086 0.045036);
+    nPoints 1000;
+}
+data10mm25
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0225166604 0.0000000827 0.045036);
+    end     (-0.0225166604 -0.0000000827 0.045036);
+    nPoints 1000;
+}
+data10mm26
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0224722263 0.0014138737 0.045036);
+    end     (-0.0224722263 -0.0014138737 0.045036);
+    nPoints 1000;
+}
+data10mm27
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0223391099 0.0028220851 0.045036);
+    end     (-0.0223391099 -0.0028220851 0.045036);
+    nPoints 1000;
+}
+data10mm28
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0221178364 0.0042191597 0.045036);
+    end     (-0.0221178364 -0.0042191597 0.045036);
+    nPoints 1000;
+}
+data10mm29
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0218092230 0.0055998023 0.045036);
+    end     (-0.0218092230 -0.0055998023 0.045036);
+    nPoints 1000;
+}
+data10mm30
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0214145859 0.0069581251 0.045036);
+    end     (-0.0214145859 -0.0069581251 0.045036);
+    nPoints 1000;
+}
+data10mm31
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0209354402 0.0082889890 0.045036);
+    end     (-0.0209354402 -0.0082889890 0.045036);
+    nPoints 1000;
+}
+data10mm32
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0203736767 0.0095871420 0.045036);
+    end     (-0.0203736767 -0.0095871420 0.045036);
+    nPoints 1000;
+}
+data10mm33
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0197315124 0.0108474612 0.045036);
+    end     (-0.0197315124 -0.0108474612 0.045036);
+    nPoints 1000;
+}
+data10mm34
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0190114814 0.0120649729 0.045036);
+    end     (-0.0190114814 -0.0120649729 0.045036);
+    nPoints 1000;
+}
+data10mm35
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0182162929 0.0132350546 0.045036);
+    end     (-0.0182162929 -0.0132350546 0.045036);
+    nPoints 1000;
+}
+data10mm36
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0173493378 0.0143527166 0.045036);
+    end     (-0.0173493378 -0.0143527166 0.045036);
+    nPoints 1000;
+}
+data10mm37
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0164139169 0.0154137383 0.045036);
+    end     (-0.0164139169 -0.0154137383 0.045036);
+    nPoints 1000;
+}
+data10mm38
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0154137216 0.0164139326 0.045036);
+    end     (-0.0154137216 -0.0164139326 0.045036);
+    nPoints 1000;
+}
+data10mm39
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0143526989 0.0173493524 0.045036);
+    end     (-0.0143526989 -0.0173493524 0.045036);
+    nPoints 1000;
+}
+data10mm40
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0132348539 0.0182164387 0.045036);
+    end     (-0.0132348539 -0.0182164387 0.045036);
+    nPoints 1000;
+}
+data10mm41
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0120649535 0.0190114937 0.045036);
+    end     (-0.0120649535 -0.0190114937 0.045036);
+    nPoints 1000;
+}
+data10mm42
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0108474410 0.0197315235 0.045036);
+    end     (-0.0108474410 -0.0197315235 0.045036);
+    nPoints 1000;
+}
+data10mm43
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0095871212 0.0203736865 0.045036);
+    end     (-0.0095871212 -0.0203736865 0.045036);
+    nPoints 1000;
+}
+data10mm44
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0082889677 0.0209354487 0.045036);
+    end     (-0.0082889677 -0.0209354487 0.045036);
+    nPoints 1000;
+}
+data10mm45
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0069578891 0.0214146626 0.045036);
+    end     (-0.0069578891 -0.0214146626 0.045036);
+    nPoints 1000;
+}
+data10mm46
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0055995620 0.0218092848 0.045036);
+    end     (-0.0055995620 -0.0218092848 0.045036);
+    nPoints 1000;
+}
+data10mm47
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0042191372 0.0221178407 0.045036);
+    end     (-0.0042191372 -0.0221178407 0.045036);
+    nPoints 1000;
+}
+data10mm48
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0028220623 0.0223391128 0.045036);
+    end     (-0.0028220623 -0.0223391128 0.045036);
+    nPoints 1000;
+}
+data10mm49
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0014138508 0.0224722278 0.045036);
+    end     (-0.0014138508 -0.0224722278 0.045036);
+    nPoints 1000;
+}
+data10mm50
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0000000597 0.0225166604 0.045036);
+    end     (-0.0000000597 -0.0225166604 0.045036);
+    nPoints 1000;
+}
+data10mm51
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0014139563 0.0224722211 0.045036);
+    end     (0.0014139563 -0.0224722211 0.045036);
+    nPoints 1000;
+}
+data10mm52
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0028221672 0.0223390995 0.045036);
+    end     (0.0028221672 -0.0223390995 0.045036);
+    nPoints 1000;
+}
+data10mm53
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0042192410 0.0221178209 0.045036);
+    end     (0.0042192410 -0.0221178209 0.045036);
+    nPoints 1000;
+}
+data10mm54
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0055996643 0.0218092585 0.045036);
+    end     (0.0055996643 -0.0218092585 0.045036);
+    nPoints 1000;
+}
+data10mm55
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0069579896 0.0214146300 0.045036);
+    end     (0.0069579896 -0.0214146300 0.045036);
+    nPoints 1000;
+}
+data10mm56
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0082890659 0.0209354098 0.045036);
+    end     (0.0082890659 -0.0209354098 0.045036);
+    nPoints 1000;
+}
+data10mm57
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0095872168 0.0203736415 0.045036);
+    end     (0.0095872168 -0.0203736415 0.045036);
+    nPoints 1000;
+}
+data10mm58
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0108475336 0.0197314726 0.045036);
+    end     (0.0108475336 -0.0197314726 0.045036);
+    nPoints 1000;
+}
+data10mm59
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0120650427 0.0190114371 0.045036);
+    end     (0.0120650427 -0.0190114371 0.045036);
+    nPoints 1000;
+}
+data10mm60
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0132349393 0.0182163766 0.045036);
+    end     (0.0132349393 -0.0182163766 0.045036);
+    nPoints 1000;
+}
+data10mm61
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0143527803 0.0173492851 0.045036);
+    end     (0.0143527803 -0.0173492851 0.045036);
+    nPoints 1000;
+}
+data10mm62
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0154137986 0.0164138603 0.045036);
+    end     (0.0154137986 -0.0164138603 0.045036);
+    nPoints 1000;
+}
+data10mm63
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0164139892 0.0154136613 0.045036);
+    end     (0.0164139892 -0.0154136613 0.045036);
+    nPoints 1000;
+}
+data10mm64
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0173494052 0.0143526352 0.045036);
+    end     (0.0173494052 -0.0143526352 0.045036);
+    nPoints 1000;
+}
+data10mm65
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0182163550 0.0132349691 0.045036);
+    end     (0.0182163550 -0.0132349691 0.045036);
+    nPoints 1000;
+}
+data10mm66
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0190115380 0.0120648836 0.045036);
+    end     (0.0190115380 -0.0120648836 0.045036);
+    nPoints 1000;
+}
+data10mm67
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0197315633 0.0108473686 0.045036);
+    end     (0.0197315633 -0.0108473686 0.045036);
+    nPoints 1000;
+}
+data10mm68
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0203737217 0.0095870464 0.045036);
+    end     (0.0203737217 -0.0095870464 0.045036);
+    nPoints 1000;
+}
+data10mm69
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0209354791 0.0082888908 0.045036);
+    end     (0.0209354791 -0.0082888908 0.045036);
+    nPoints 1000;
+}
+data10mm70
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0214146186 0.0069580246 0.045036);
+    end     (0.0214146186 -0.0069580246 0.045036);
+    nPoints 1000;
+}
+data10mm71
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0218092493 0.0055996999 0.045036);
+    end     (0.0218092493 -0.0055996999 0.045036);
+    nPoints 1000;
+}
+data10mm72
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0221178562 0.0042190559 0.045036);
+    end     (0.0221178562 -0.0042190559 0.045036);
+    nPoints 1000;
+}
+data10mm73
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0223391231 0.0028219803 0.045036);
+    end     (0.0223391231 -0.0028219803 0.045036);
+    nPoints 1000;
+}
+data10mm74
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0224722330 0.0014137682 0.045036);
+    end     (0.0224722330 -0.0014137682 0.045036);
+    nPoints 1000;
+}
+data10mm75
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0225166604 -0.0000000230 0.045036);
+    end     (0.0225166604 0.0000000230 0.045036);
+    nPoints 1000;
+}
+data10mm76
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0224722301 -0.0014138141 0.045036);
+    end     (0.0224722301 0.0014138141 0.045036);
+    nPoints 1000;
+}
+data10mm77
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0223390892 -0.0028222492 0.045036);
+    end     (0.0223390892 0.0028222492 0.045036);
+    nPoints 1000;
+}
+data10mm78
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0221178054 -0.0042193222 0.045036);
+    end     (0.0221178054 0.0042193222 0.045036);
+    nPoints 1000;
+}
+data10mm79
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0218092379 -0.0055997444 0.045036);
+    end     (0.0218092379 0.0055997444 0.045036);
+    nPoints 1000;
+}
+data10mm80
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0214146044 -0.0069580683 0.045036);
+    end     (0.0214146044 0.0069580683 0.045036);
+    nPoints 1000;
+}
+data10mm81
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0209354622 -0.0082889335 0.045036);
+    end     (0.0209354622 0.0082889335 0.045036);
+    nPoints 1000;
+}
+data10mm82
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0203736063 -0.0095872917 0.045036);
+    end     (0.0203736063 0.0095872917 0.045036);
+    nPoints 1000;
+}
+data10mm83
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0197314327 -0.0108476061 0.045036);
+    end     (0.0197314327 0.0108476061 0.045036);
+    nPoints 1000;
+}
+data10mm84
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0190113928 -0.0120651125 0.045036);
+    end     (0.0190113928 0.0120651125 0.045036);
+    nPoints 1000;
+}
+data10mm85
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0182163280 -0.0132350063 0.045036);
+    end     (0.0182163280 0.0132350063 0.045036);
+    nPoints 1000;
+}
+data10mm86
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0173493759 -0.0143526705 0.045036);
+    end     (0.0173493759 0.0143526705 0.045036);
+    nPoints 1000;
+}
+data10mm87
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0164138037 -0.0154138589 0.045036);
+    end     (0.0164138037 0.0154138589 0.045036);
+    nPoints 1000;
+}
+data10mm88
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0154136010 -0.0164140458 0.045036);
+    end     (0.0154136010 0.0164140458 0.045036);
+    nPoints 1000;
+}
+data10mm89
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0143525714 -0.0173494579 0.045036);
+    end     (0.0143525714 0.0173494579 0.045036);
+    nPoints 1000;
+}
+data10mm90
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0132349022 -0.0182164036 0.045036);
+    end     (0.0132349022 0.0182164036 0.045036);
+    nPoints 1000;
+}
+data10mm91
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0120650039 -0.0190114617 0.045036);
+    end     (0.0120650039 0.0190114617 0.045036);
+    nPoints 1000;
+}
+data10mm92
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0108474934 -0.0197314947 0.045036);
+    end     (0.0108474934 0.0197314947 0.045036);
+    nPoints 1000;
+}
+data10mm93
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0095869716 -0.0203737569 0.045036);
+    end     (0.0095869716 0.0203737569 0.045036);
+    nPoints 1000;
+}
+data10mm94
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0082888139 -0.0209355095 0.045036);
+    end     (0.0082888139 0.0209355095 0.045036);
+    nPoints 1000;
+}
+data10mm95
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0069579460 -0.0214146441 0.045036);
+    end     (0.0069579460 0.0214146441 0.045036);
+    nPoints 1000;
+}
+data10mm96
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0055996198 -0.0218092699 0.045036);
+    end     (0.0055996198 0.0218092699 0.045036);
+    nPoints 1000;
+}
+data10mm97
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0042191959 -0.0221178295 0.045036);
+    end     (0.0042191959 0.0221178295 0.045036);
+    nPoints 1000;
+}
+data10mm98
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0028218982 -0.0223391335 0.045036);
+    end     (0.0028218982 0.0223391335 0.045036);
+    nPoints 1000;
+}
+data10mm99
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0014136857 -0.0224722382 0.045036);
+    end     (0.0014136857 0.0224722382 0.045036);
+    nPoints 1000;
+}
+
+
+data15mm0
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0000000000 -0.0225166604 0.05009);
+    end     (0.0000000000 0.0225166604 0.05009);
+    nPoints 1000;
+}
+data15mm1
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0014138339 -0.0224722288 0.05009);
+    end     (-0.0014138339 0.0224722288 0.05009);
+    nPoints 1000;
+}
+data15mm2
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0028220924 -0.0223391090 0.05009);
+    end     (-0.0028220924 0.0223391090 0.05009);
+    nPoints 1000;
+}
+data15mm3
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0042192112 -0.0221178266 0.05009);
+    end     (-0.0042192112 0.0221178266 0.05009);
+    nPoints 1000;
+}
+data15mm4
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0055996786 -0.0218092548 0.05009);
+    end     (-0.0055996786 0.0218092548 0.05009);
+    nPoints 1000;
+}
+data15mm5
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0069580250 -0.0214146184 0.05009);
+    end     (-0.0069580250 0.0214146184 0.05009);
+    nPoints 1000;
+}
+data15mm6
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0082889331 -0.0209354624 0.05009);
+    end     (-0.0082889331 0.0209354624 0.05009);
+    nPoints 1000;
+}
+data15mm7
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0095871283 -0.0203736832 0.05009);
+    end     (-0.0095871283 0.0203736832 0.05009);
+    nPoints 1000;
+}
+data15mm8
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0108474873 -0.0197314980 0.05009);
+    end     (-0.0108474873 0.0197314980 0.05009);
+    nPoints 1000;
+}
+data15mm9
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0120650361 -0.0190114413 0.05009);
+    end     (-0.0120650361 0.0190114413 0.05009);
+    nPoints 1000;
+}
+data15mm10
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0132349695 -0.0182163547 0.05009);
+    end     (-0.0132349695 0.0182163547 0.05009);
+    nPoints 1000;
+}
+data15mm11
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0143526702 -0.0173493762 0.05009);
+    end     (-0.0143526702 0.0173493762 0.05009);
+    nPoints 1000;
+}
+data15mm12
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0154137272 -0.0164139273 0.05009);
+    end     (-0.0154137272 0.0164139273 0.05009);
+    nPoints 1000;
+}
+data15mm13
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0164139531 -0.0154136998 0.05009);
+    end     (-0.0164139531 0.0154136998 0.05009);
+    nPoints 1000;
+}
+data15mm14
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0173494002 -0.0143526412 0.05009);
+    end     (-0.0173494002 0.0143526412 0.05009);
+    nPoints 1000;
+}
+data15mm15
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0182163636 -0.0132349572 0.05009);
+    end     (-0.0182163636 0.0132349572 0.05009);
+    nPoints 1000;
+}
+data15mm16
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0190114494 -0.0120650233 0.05009);
+    end     (-0.0190114494 0.0120650233 0.05009);
+    nPoints 1000;
+}
+data15mm17
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0197314836 -0.0108475135 0.05009);
+    end     (-0.0197314836 0.0108475135 0.05009);
+    nPoints 1000;
+}
+data15mm18
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0203736513 -0.0095871961 0.05009);
+    end     (-0.0203736513 0.0095871961 0.05009);
+    nPoints 1000;
+}
+data15mm19
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0209355011 -0.0082888352 0.05009);
+    end     (-0.0209355011 0.0082888352 0.05009);
+    nPoints 1000;
+}
+data15mm20
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0214146370 -0.0069579678 0.05009);
+    end     (-0.0214146370 0.0069579678 0.05009);
+    nPoints 1000;
+}
+data15mm21
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0218092642 -0.0055996421 0.05009);
+    end     (-0.0218092642 0.0055996421 0.05009);
+    nPoints 1000;
+}
+data15mm22
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0221178252 -0.0042192184 0.05009);
+    end     (-0.0221178252 0.0042192184 0.05009);
+    nPoints 1000;
+}
+data15mm23
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0223391024 -0.0028221444 0.05009);
+    end     (-0.0223391024 0.0028221444 0.05009);
+    nPoints 1000;
+}
+data15mm24
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0224722367 -0.0014137086 0.05009);
+    end     (-0.0224722367 0.0014137086 0.05009);
+    nPoints 1000;
+}
+data15mm25
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0225166604 0.0000000827 0.05009);
+    end     (-0.0225166604 -0.0000000827 0.05009);
+    nPoints 1000;
+}
+data15mm26
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0224722263 0.0014138737 0.05009);
+    end     (-0.0224722263 -0.0014138737 0.05009);
+    nPoints 1000;
+}
+data15mm27
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0223391099 0.0028220851 0.05009);
+    end     (-0.0223391099 -0.0028220851 0.05009);
+    nPoints 1000;
+}
+data15mm28
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0221178364 0.0042191597 0.05009);
+    end     (-0.0221178364 -0.0042191597 0.05009);
+    nPoints 1000;
+}
+data15mm29
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0218092230 0.0055998023 0.05009);
+    end     (-0.0218092230 -0.0055998023 0.05009);
+    nPoints 1000;
+}
+data15mm30
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0214145859 0.0069581251 0.05009);
+    end     (-0.0214145859 -0.0069581251 0.05009);
+    nPoints 1000;
+}
+data15mm31
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0209354402 0.0082889890 0.05009);
+    end     (-0.0209354402 -0.0082889890 0.05009);
+    nPoints 1000;
+}
+data15mm32
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0203736767 0.0095871420 0.05009);
+    end     (-0.0203736767 -0.0095871420 0.05009);
+    nPoints 1000;
+}
+data15mm33
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0197315124 0.0108474612 0.05009);
+    end     (-0.0197315124 -0.0108474612 0.05009);
+    nPoints 1000;
+}
+data15mm34
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0190114814 0.0120649729 0.05009);
+    end     (-0.0190114814 -0.0120649729 0.05009);
+    nPoints 1000;
+}
+data15mm35
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0182162929 0.0132350546 0.05009);
+    end     (-0.0182162929 -0.0132350546 0.05009);
+    nPoints 1000;
+}
+data15mm36
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0173493378 0.0143527166 0.05009);
+    end     (-0.0173493378 -0.0143527166 0.05009);
+    nPoints 1000;
+}
+data15mm37
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0164139169 0.0154137383 0.05009);
+    end     (-0.0164139169 -0.0154137383 0.05009);
+    nPoints 1000;
+}
+data15mm38
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0154137216 0.0164139326 0.05009);
+    end     (-0.0154137216 -0.0164139326 0.05009);
+    nPoints 1000;
+}
+data15mm39
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0143526989 0.0173493524 0.05009);
+    end     (-0.0143526989 -0.0173493524 0.05009);
+    nPoints 1000;
+}
+data15mm40
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0132348539 0.0182164387 0.05009);
+    end     (-0.0132348539 -0.0182164387 0.05009);
+    nPoints 1000;
+}
+data15mm41
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0120649535 0.0190114937 0.05009);
+    end     (-0.0120649535 -0.0190114937 0.05009);
+    nPoints 1000;
+}
+data15mm42
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0108474410 0.0197315235 0.05009);
+    end     (-0.0108474410 -0.0197315235 0.05009);
+    nPoints 1000;
+}
+data15mm43
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0095871212 0.0203736865 0.05009);
+    end     (-0.0095871212 -0.0203736865 0.05009);
+    nPoints 1000;
+}
+data15mm44
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0082889677 0.0209354487 0.05009);
+    end     (-0.0082889677 -0.0209354487 0.05009);
+    nPoints 1000;
+}
+data15mm45
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0069578891 0.0214146626 0.05009);
+    end     (-0.0069578891 -0.0214146626 0.05009);
+    nPoints 1000;
+}
+data15mm46
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0055995620 0.0218092848 0.05009);
+    end     (-0.0055995620 -0.0218092848 0.05009);
+    nPoints 1000;
+}
+data15mm47
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0042191372 0.0221178407 0.05009);
+    end     (-0.0042191372 -0.0221178407 0.05009);
+    nPoints 1000;
+}
+data15mm48
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0028220623 0.0223391128 0.05009);
+    end     (-0.0028220623 -0.0223391128 0.05009);
+    nPoints 1000;
+}
+data15mm49
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0014138508 0.0224722278 0.05009);
+    end     (-0.0014138508 -0.0224722278 0.05009);
+    nPoints 1000;
+}
+data15mm50
+{
+    type    lineUniform;
+    axis    x;
+    start   (0.0000000597 0.0225166604 0.05009);
+    end     (-0.0000000597 -0.0225166604 0.05009);
+    nPoints 1000;
+}
+data15mm51
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0014139563 0.0224722211 0.05009);
+    end     (0.0014139563 -0.0224722211 0.05009);
+    nPoints 1000;
+}
+data15mm52
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0028221672 0.0223390995 0.05009);
+    end     (0.0028221672 -0.0223390995 0.05009);
+    nPoints 1000;
+}
+data15mm53
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0042192410 0.0221178209 0.05009);
+    end     (0.0042192410 -0.0221178209 0.05009);
+    nPoints 1000;
+}
+data15mm54
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0055996643 0.0218092585 0.05009);
+    end     (0.0055996643 -0.0218092585 0.05009);
+    nPoints 1000;
+}
+data15mm55
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0069579896 0.0214146300 0.05009);
+    end     (0.0069579896 -0.0214146300 0.05009);
+    nPoints 1000;
+}
+data15mm56
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0082890659 0.0209354098 0.05009);
+    end     (0.0082890659 -0.0209354098 0.05009);
+    nPoints 1000;
+}
+data15mm57
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0095872168 0.0203736415 0.05009);
+    end     (0.0095872168 -0.0203736415 0.05009);
+    nPoints 1000;
+}
+data15mm58
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0108475336 0.0197314726 0.05009);
+    end     (0.0108475336 -0.0197314726 0.05009);
+    nPoints 1000;
+}
+data15mm59
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0120650427 0.0190114371 0.05009);
+    end     (0.0120650427 -0.0190114371 0.05009);
+    nPoints 1000;
+}
+data15mm60
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0132349393 0.0182163766 0.05009);
+    end     (0.0132349393 -0.0182163766 0.05009);
+    nPoints 1000;
+}
+data15mm61
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0143527803 0.0173492851 0.05009);
+    end     (0.0143527803 -0.0173492851 0.05009);
+    nPoints 1000;
+}
+data15mm62
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0154137986 0.0164138603 0.05009);
+    end     (0.0154137986 -0.0164138603 0.05009);
+    nPoints 1000;
+}
+data15mm63
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0164139892 0.0154136613 0.05009);
+    end     (0.0164139892 -0.0154136613 0.05009);
+    nPoints 1000;
+}
+data15mm64
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0173494052 0.0143526352 0.05009);
+    end     (0.0173494052 -0.0143526352 0.05009);
+    nPoints 1000;
+}
+data15mm65
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0182163550 0.0132349691 0.05009);
+    end     (0.0182163550 -0.0132349691 0.05009);
+    nPoints 1000;
+}
+data15mm66
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0190115380 0.0120648836 0.05009);
+    end     (0.0190115380 -0.0120648836 0.05009);
+    nPoints 1000;
+}
+data15mm67
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0197315633 0.0108473686 0.05009);
+    end     (0.0197315633 -0.0108473686 0.05009);
+    nPoints 1000;
+}
+data15mm68
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0203737217 0.0095870464 0.05009);
+    end     (0.0203737217 -0.0095870464 0.05009);
+    nPoints 1000;
+}
+data15mm69
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0209354791 0.0082888908 0.05009);
+    end     (0.0209354791 -0.0082888908 0.05009);
+    nPoints 1000;
+}
+data15mm70
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0214146186 0.0069580246 0.05009);
+    end     (0.0214146186 -0.0069580246 0.05009);
+    nPoints 1000;
+}
+data15mm71
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0218092493 0.0055996999 0.05009);
+    end     (0.0218092493 -0.0055996999 0.05009);
+    nPoints 1000;
+}
+data15mm72
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0221178562 0.0042190559 0.05009);
+    end     (0.0221178562 -0.0042190559 0.05009);
+    nPoints 1000;
+}
+data15mm73
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0223391231 0.0028219803 0.05009);
+    end     (0.0223391231 -0.0028219803 0.05009);
+    nPoints 1000;
+}
+data15mm74
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0224722330 0.0014137682 0.05009);
+    end     (0.0224722330 -0.0014137682 0.05009);
+    nPoints 1000;
+}
+data15mm75
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0225166604 -0.0000000230 0.05009);
+    end     (0.0225166604 0.0000000230 0.05009);
+    nPoints 1000;
+}
+data15mm76
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0224722301 -0.0014138141 0.05009);
+    end     (0.0224722301 0.0014138141 0.05009);
+    nPoints 1000;
+}
+data15mm77
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0223390892 -0.0028222492 0.05009);
+    end     (0.0223390892 0.0028222492 0.05009);
+    nPoints 1000;
+}
+data15mm78
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0221178054 -0.0042193222 0.05009);
+    end     (0.0221178054 0.0042193222 0.05009);
+    nPoints 1000;
+}
+data15mm79
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0218092379 -0.0055997444 0.05009);
+    end     (0.0218092379 0.0055997444 0.05009);
+    nPoints 1000;
+}
+data15mm80
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0214146044 -0.0069580683 0.05009);
+    end     (0.0214146044 0.0069580683 0.05009);
+    nPoints 1000;
+}
+data15mm81
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0209354622 -0.0082889335 0.05009);
+    end     (0.0209354622 0.0082889335 0.05009);
+    nPoints 1000;
+}
+data15mm82
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0203736063 -0.0095872917 0.05009);
+    end     (0.0203736063 0.0095872917 0.05009);
+    nPoints 1000;
+}
+data15mm83
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0197314327 -0.0108476061 0.05009);
+    end     (0.0197314327 0.0108476061 0.05009);
+    nPoints 1000;
+}
+data15mm84
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0190113928 -0.0120651125 0.05009);
+    end     (0.0190113928 0.0120651125 0.05009);
+    nPoints 1000;
+}
+data15mm85
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0182163280 -0.0132350063 0.05009);
+    end     (0.0182163280 0.0132350063 0.05009);
+    nPoints 1000;
+}
+data15mm86
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0173493759 -0.0143526705 0.05009);
+    end     (0.0173493759 0.0143526705 0.05009);
+    nPoints 1000;
+}
+data15mm87
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0164138037 -0.0154138589 0.05009);
+    end     (0.0164138037 0.0154138589 0.05009);
+    nPoints 1000;
+}
+data15mm88
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0154136010 -0.0164140458 0.05009);
+    end     (0.0154136010 0.0164140458 0.05009);
+    nPoints 1000;
+}
+data15mm89
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0143525714 -0.0173494579 0.05009);
+    end     (0.0143525714 0.0173494579 0.05009);
+    nPoints 1000;
+}
+data15mm90
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0132349022 -0.0182164036 0.05009);
+    end     (0.0132349022 0.0182164036 0.05009);
+    nPoints 1000;
+}
+data15mm91
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0120650039 -0.0190114617 0.05009);
+    end     (0.0120650039 0.0190114617 0.05009);
+    nPoints 1000;
+}
+data15mm92
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0108474934 -0.0197314947 0.05009);
+    end     (0.0108474934 0.0197314947 0.05009);
+    nPoints 1000;
+}
+data15mm93
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0095869716 -0.0203737569 0.05009);
+    end     (0.0095869716 0.0203737569 0.05009);
+    nPoints 1000;
+}
+data15mm94
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0082888139 -0.0209355095 0.05009);
+    end     (0.0082888139 0.0209355095 0.05009);
+    nPoints 1000;
+}
+data15mm95
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0069579460 -0.0214146441 0.05009);
+    end     (0.0069579460 0.0214146441 0.05009);
+    nPoints 1000;
+}
+data15mm96
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0055996198 -0.0218092699 0.05009);
+    end     (0.0055996198 0.0218092699 0.05009);
+    nPoints 1000;
+}
+data15mm97
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0042191959 -0.0221178295 0.05009);
+    end     (0.0042191959 0.0221178295 0.05009);
+    nPoints 1000;
+}
+data15mm98
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0028218982 -0.0223391335 0.05009);
+    end     (0.0028218982 0.0223391335 0.05009);
+    nPoints 1000;
+}
+data15mm99
+{
+    type    lineUniform;
+    axis    x;
+    start   (-0.0014136857 -0.0224722382 0.05009);
+    end     (0.0014136857 0.0224722382 0.05009);
+    nPoints 1000;
+}
+
+
+
+);
+
+fields          (UMean OHMean TMean);
+
+// ************************************************************************* //
