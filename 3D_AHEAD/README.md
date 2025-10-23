@@ -2,6 +2,7 @@
 This is a validation study of the AHEAD premixed burner carried out under stable conditions at an equivalence ratio of 0.6. The simulations were conducted using OpenFOAM with FickianTransportFoam and DLBFoam, as published in Ref.[[1]](#1) and Ref.[[2]](#2). AHEAD is a premixed swirl-stabilized burner, which is enhanced for flashback over a wide range of operating conditions, using hydrogen as fuel. The experimental work was carried out by Reichel et al. [[3]](#3). 
 
 ## Case description
+Air is introduced through the plenum, from where it is subdivided into three main paths to access the cylindrical mixing chamber: 1) axial inlet, providing the axial momentum (8~mm diameter), 2) 8 radial slits, creating tangential momentum (swirl motion), and 3) 12 dilution holes, preventing boundary layer flashback. Fuel is introduced through 16 fuel inlet ports into the mixing chamber; each fuel inlet port is 0.8~mm in diameter, encircling the truncated center body at the bottom of the mixing chamber. The diameter of the mixing chamber is 34~mm. 
 
 <p align="center">
   <img src="doc/sc.png" alt="drawing" width="500"/>
@@ -12,6 +13,7 @@ This is a validation study of the AHEAD premixed burner carried out under stable
 <p align="center">
   <img src="doc/mesh.png" alt="drawing" width="500"/>
 </p>
+
 ## Execution
 
 
