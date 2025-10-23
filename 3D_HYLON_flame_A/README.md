@@ -17,7 +17,7 @@ The details of the numerical setup can be found in our publication Ref.[[3]](#3)
 
 
 ## Execution
-Compile first the mechanism in the *mech* folder and run the case with *./Allrun*. Download the latest time step that contains all the species data from the provided link if needed.
+Compile first the mechanism in the *mech* folder and run the case with *./Allrun*. Download the constant file which contains the mesh details from the provided link. Download the latest time step that contains all the species data from the provided link if needed.
 
 ## PostProcessing/Validation
 To post-process the simulation data, you can use Python or Paraview to visualize the flame. For sampling, two sampling dictionaries are provided in the system folder that can be used for plotting the experimental data over a line at different axial heights.
