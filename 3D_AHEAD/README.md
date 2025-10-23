@@ -9,6 +9,7 @@ Air is introduced through the plenum, from where it is subdivided into three mai
 </p>
 
 ## Numerical setup
+The details of the numerical setup can be found in our publication Ref [[1]](#1)
 
 <p align="center">
   <img src="doc/mesh.png" alt="drawing" width="500"/>
