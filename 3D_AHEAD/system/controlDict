@@ -53,16 +53,11 @@ OptimisationSwitches
 
 libs
 (
-
     "libFickianTransport.so"
-
-
     "libchemistryModel_DLB.so"
     "libODE_DLB.so"
-    "../dlbfoam/lib/build/libc_pyjac.so"
-
-
-     "libBilgerMixtureFraction.so"
+    "$FOAM_CASE/constant/mech/lib/libc_pyjac.so"
+    // "libBilgerMixtureFraction.so"
 );
 
 
@@ -70,12 +65,5 @@ libs
 
 // ************************************************************************* //
 
-///////////////////////////////////////////////////////////////////////////
-functions
-{
-}
-
-
-///////////////////////////////////////////////////////////////////////////
 
 
