@@ -76,15 +76,10 @@ functions
 
 libs
 (
-   // "libchemistryModel_DLB.so"
-   // "libODE_DLB.so"
-    //"$FOAM_CASE/constant/mech/lib/libc_pyjac.so"
-
     "libchemistryModel_DLB.so"
     "libODE_DLB.so"
-    "/scratch/project_2004667/shahinzi/DLBmech/Capurso/lib/build/libc_pyjac.so"    
-     "libFickianTransport.so"
-
+    "$FOAM_CASE/constant/mech/lib/libc_pyjac.so"
+    "libFickianTransport.so"
 );
 
 
