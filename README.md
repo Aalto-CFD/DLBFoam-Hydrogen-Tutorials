@@ -24,7 +24,25 @@ If you use our tutorial cases, please cite the paper discussing these test cases
 
 ## References
 <a id="1">[1]</a>
-A. Haider, I. Morev, A. Rintanen, Z. Shahin, P. Tamadonfar, S. Karimkashi, A. Wehrfritz, V. Vuorinen, Accelerated numerical simulations of hydrogen flames: Open-source implementation of an advanced diffusion model library in OpenFOAM
+A. Haider, I. Morev, A. Rintanen, Z. Shahin, P. Tamadonfar, S. Karimkashi, A. Wehrfritz, V. Vuorinen, Accelerated numerical simulations of hydrogen flames: Open-source implementation of an advanced diffusion model library in OpenFOAM, International Journal of Hydrogen Energy, Volume 189, 152115, [10.1016/j.ijhydene.2025.152115](https://doi.org/10.1016/j.ijhydene.2025.152115) (2025)
+<details>
+<summary>BibTex</summary>
+<p>
+ 
+```
+@article{haider2025accelerated,
+ author = {Ali Haider and Ilya Morev and Aleksi Rintanen and Zin Shahin and Parsa Tamadonfar and Shervin Karimkashi and Armin Wehrfritz and Ville Vuorinen},
+ title = {{Accelerated numerical simulations of hydrogen flames: Open-source implementation of an advanced diffusion model library in OpenFOAM}},
+ journal = {International Journal of Hydrogen Energy},
+ volume = {189},
+ pages = {152115},
+ year = {2025},
+ issn = {0360-3199},
+ doi = {10.1016/j.ijhydene.2025.152115}
+}
+```
+</p>
+</details>
 
 <a id="2">[2]</a> 
 I. Morev, B. Tekgül, M. Gadalla, A. Shahanaghi, J. Kannan, S. Karimkashi, O. Kaario, V. Vuorinen, Fast reactive flow simulations using analytical Jacobian and dynamic load balancing in OpenFOAM, Physics of Fluids 34, 021801, [10.1063/5.0077437](https://doi.org/10.1063/5.0077437) (2022).
@@ -41,7 +59,7 @@ I. Morev, B. Tekgül, M. Gadalla, A. Shahanaghi, J. Kannan, S. Karimkashi, O. Ka
   number = {2},
   pages = {021801},
   year = {2022},
-  doi = {10.1063/5.0077437},
+  doi = {10.1063/5.0077437}
 }
 ```
 </p>
